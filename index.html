@@ -1,0 +1,4320 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Akhash A M | MIS Executive &amp; Data Analyst Portfolio</title>
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Font Awesome 6 for crisp icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- Tailwind CSS CDN -->
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  <!-- <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            obsidian: '#06080d',
+            space: '#080a10',
+            card: '#0d111a',
+            cardHover: '#111724',
+          },
+        },
+      },
+    };
+  </script> -->
+ 
+
+  <style>
+    /* ---------- 1. Custom component styles ---------- */
+:root {
+  --bg-primary: #06080d;
+  --bg-secondary: #0b0f17;
+  --card-bg: rgba(13, 17, 26, 0.85);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --cyan-glow: #22d3ee;
+  --purple-glow: #a855f7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: #e2e8f0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  overflow-x: hidden;
+  background-image:
+    radial-gradient(circle at 15% 12%, rgba(34, 211, 238, 0.07) 0%, transparent 38%),
+    radial-gradient(circle at 85% 22%, rgba(168, 85, 247, 0.07) 0%, transparent 40%),
+    radial-gradient(circle at 50% 55%, rgba(56, 189, 248, 0.04) 0%, transparent 50%),
+    radial-gradient(circle at 80% 85%, rgba(139, 92, 246, 0.06) 0%, transparent 42%);
+}
+
+/* Subtle dot grid texture overlay */
+.akx-046 {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Gradient Text Utility */
+.akx-402 {
+  background: linear-gradient(90deg, #22d3ee 0%, #60a5fa 48%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Primary Gradient Button */
+.akx-101 {
+  background: linear-gradient(90deg, #06b6d4 0%, #3b82f6 50%, #9333ea 100%);
+  background-size: 200% auto;
+  transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  box-shadow: 0 4px 20px -4px rgba(34, 211, 238, 0.4), 0 4px 20px -4px rgba(168, 85, 247, 0.35);
+}
+.akx-101:hover {
+  background-position: right center;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px -4px rgba(34, 211, 238, 0.55), 0 8px 28px -4px rgba(168, 85, 247, 0.5);
+}
+
+/* Glassmorphic Card */
+.akx-174 {
+  background: linear-gradient(145deg, rgba(16, 21, 33, 0.92), rgba(10, 13, 20, 0.95));
+  border: 1px solid rgba(255, 255, 255, 0.075);
+  backdrop-filter: blur(12px);
+  transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.32s ease, box-shadow 0.32s ease;
+}
+.akx-174:hover {
+  transform: translateY(-4px);
+  border-color: rgba(34, 211, 238, 0.32);
+  box-shadow: 0 14px 36px -10px rgba(0, 0, 0, 0.7), 0 0 24px -6px rgba(34, 211, 238, 0.14);
+}
+
+/* Section Header Accent Line */
+.akx-346 {
+  width: 56px;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #22d3ee, #a855f7);
+  margin: 0.75rem auto 0;
+}
+
+/* Hero Orbital Portrait Rings */
+@keyframes spinSlow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes spinReverse {
+  0% { transform: rotate(360deg); }
+  100% { transform: rotate(0deg); }
+}
+@keyframes floatY {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+.akx-301 {
+  animation: spinSlow 24s linear infinite;
+}
+.akx-302 {
+  animation: spinReverse 18s linear infinite;
+}
+.akx-147 {
+  animation: floatY 4.5s ease-in-out infinite;
+}
+.akx-148 {
+  animation: floatY 5.2s ease-in-out 1.4s infinite;
+}
+
+/* Typing Cursor */
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+.akx-440 {
+  display: inline-block;
+  width: 2px;
+  height: 1.15em;
+  background-color: #22d3ee;
+  vertical-align: text-bottom;
+  margin-left: 3px;
+  animation: blink 0.9s infinite;
+}
+
+/* 3D Word Cloud Stage */
+#tag-cloud-container {
+  perspective: 1000px;
+  user-select: none;
+  cursor: grab;
+}
+#tag-cloud-container:active {
+  cursor: grabbing;
+}
+.akx-469 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center center;
+  white-space: nowrap;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+  will-change: transform, opacity;
+  pointer-events: auto;
+}
+.akx-469:hover {
+  color: #22d3ee !important;
+  text-shadow: 0 0 18px rgba(34, 211, 238, 0.75);
+  z-index: 50 !important;
+}
+
+/* Scroll Reveal Animations */
+.akx-336 {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.akx-336.akx-448 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #06080d;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* ---------- 2. Reset + utility styles ---------- */
+*, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}
+
+/*
+! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com
+*/
+
+/*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  /* 1 */
+  border-width: 0;
+  /* 2 */
+  border-style: solid;
+  /* 2 */
+  border-color: #e5e7eb;
+  /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+7. Disable tap highlights on iOS
+*/
+
+html,
+:host {
+  line-height: 1.5;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -moz-tab-size: 4;
+  /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4;
+  /* 3 */
+  font-family: "Plus Jakarta Sans", sans-serif;
+  /* 4 */
+  font-feature-settings: normal;
+  /* 5 */
+  font-variation-settings: normal;
+  /* 6 */
+  -webkit-tap-highlight-color: transparent;
+  /* 7 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0;
+  /* 1 */
+  line-height: inherit;
+  /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  border-top-width: 1px;
+  /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: "JetBrains Mono", monospace;
+  /* 1 */
+  font-feature-settings: normal;
+  /* 2 */
+  font-variation-settings: normal;
+  /* 3 */
+  font-size: 1em;
+  /* 4 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0;
+  /* 1 */
+  border-color: inherit;
+  /* 2 */
+  border-collapse: collapse;
+  /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-feature-settings: inherit;
+  /* 1 */
+  font-variation-settings: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  font-weight: inherit;
+  /* 1 */
+  line-height: inherit;
+  /* 1 */
+  letter-spacing: inherit;
+  /* 1 */
+  color: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  padding: 0;
+  /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+input:where([type='button']),
+input:where([type='reset']),
+input:where([type='submit']) {
+  -webkit-appearance: button;
+  /* 1 */
+  background-color: transparent;
+  /* 2 */
+  background-image: none;
+  /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Reset default styling for dialogs.
+*/
+
+dialog {
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  /* 1 */
+  vertical-align: middle;
+  /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+
+[hidden]:where(:not([hidden="until-found"])) {
+  display: none;
+}
+
+.akx-314 {
+  pointer-events: none;
+}
+
+.akx-448 {
+  visibility: visible;
+}
+
+.akx-142 {
+  position: fixed;
+}
+
+.akx-011 {
+  position: absolute;
+}
+
+.portfolio-img img {
+  width: 90%;
+} 
+
+.akx-334 {
+  position: relative;
+}
+
+.akx-223 {
+  inset: 0px;
+}
+
+.akx-224 {
+  inset: 1rem;
+}
+
+.akx-225 {
+  left: 0px;
+  right: 0px;
+}
+
+.akx-001 {
+  bottom: -0.375rem;
+}
+
+.akx-002 {
+  left: -0.375rem;
+}
+
+.akx-003 {
+  left: -0.5rem;
+}
+
+.akx-004 {
+  left: -6rem;
+}
+
+.akx-005 {
+  right: -0.5rem;
+}
+
+.akx-006 {
+  top: -0.25rem;
+}
+
+.akx-007 {
+  top: -0.375rem;
+}
+
+.akx-008 {
+  top: -6rem;
+}
+
+.akx-099 {
+  bottom: 0px;
+}
+
+.akx-100 {
+  bottom: 0.5rem;
+}
+
+.bottom-6 {
+  bottom: 1.5rem;
+}
+
+.akx-236 {
+  left: 50%;
+}
+
+.akx-237 {
+  left: 1rem;
+}
+
+.akx-337 {
+  right: 0px;
+}
+
+.akx-338 {
+  right: 1rem;
+}
+
+.right-6 {
+  right: 1.5rem;
+}
+
+.akx-427 {
+  top: 0px;
+}
+
+.akx-428 {
+  top: 50%;
+}
+
+.akx-429 {
+  top: 5rem;
+}
+
+.akx-430 {
+  top: 0.875rem;
+}
+
+.top-4 {
+  top: 1rem;
+}
+
+.akx-467 {
+  z-index: 10;
+}
+
+.z-40 {
+  z-index: 40;
+}
+
+.akx-468 {
+  z-index: 50;
+}
+
+.akx-295 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.akx-264 {
+  margin-bottom: 0.25rem;
+}
+
+.akx-265 {
+  margin-bottom: 0.375rem;
+}
+
+.akx-266 {
+  margin-bottom: 2.5rem;
+}
+
+.akx-267 {
+  margin-bottom: 3rem;
+}
+
+.akx-268 {
+  margin-bottom: 3.5rem;
+}
+
+.akx-269 {
+  margin-bottom: 4rem;
+}
+
+.akx-270 {
+  margin-bottom: 0.5rem;
+}
+
+.akx-271 {
+  margin-bottom: 0.625rem;
+}
+
+.akx-272 {
+  margin-bottom: 0.75rem;
+}
+
+.akx-273 {
+  margin-bottom: 1rem;
+}
+
+.akx-274 {
+  margin-bottom: 1.25rem;
+}
+
+.akx-275 {
+  margin-bottom: 1.5rem;
+}
+
+.akx-288 {
+  margin-left: 2.75rem;
+}
+
+.akx-290 {
+  margin-top: 0.125rem;
+}
+
+.akx-291 {
+  margin-top: 0.25rem;
+}
+
+.akx-292 {
+  margin-top: 0.375rem;
+}
+
+.akx-293 {
+  margin-top: 2.5rem;
+}
+
+.akx-294 {
+  margin-top: 1rem;
+}
+
+.akx-066 {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.akx-143 {
+  display: flex;
+}
+
+.akx-222 {
+  display: inline-flex;
+}
+
+.akx-175 {
+  display: grid;
+}
+
+.akx-207 {
+  display: none;
+}
+
+.akx-187 {
+  height: 0.375rem;
+}
+
+.akx-188 {
+  height: 2.5rem;
+}
+
+.akx-189 {
+  height: 2.75rem;
+}
+
+.akx-190 {
+  height: 3.5rem;
+}
+
+.akx-191 {
+  height: 4rem;
+}
+
+.akx-192 {
+  height: 0.5rem;
+}
+
+.akx-193 {
+  height: 0.625rem;
+}
+
+.akx-194 {
+  height: 0.75rem;
+}
+
+.akx-195 {
+  height: 1rem;
+}
+
+.akx-196 {
+  height: 11rem;
+}
+
+.akx-197 {
+  height: 14rem;
+}
+
+.akx-198 {
+  height: 1.5rem;
+}
+
+.akx-199 {
+  height: 1.75rem;
+}
+
+.akx-200 {
+  height: 18rem;
+}
+
+.akx-201 {
+  height: 2rem;
+}
+
+.akx-202 {
+  height: 2.25rem;
+}
+
+.akx-203 {
+  height: 24rem;
+}
+
+.akx-204 {
+  height: 310px;
+}
+
+.akx-205 {
+  height: 420px;
+}
+
+.akx-206 {
+  height: 100%;
+}
+
+.akx-286 {
+  min-height: 175px;
+}
+
+.akx-449 {
+  width: 2.5rem;
+}
+
+.akx-450 {
+  width: 2.75rem;
+}
+
+.akx-451 {
+  width: 0.5rem;
+}
+
+.akx-452 {
+  width: 0.625rem;
+}
+
+.akx-453 {
+  width: 0.75rem;
+}
+
+.akx-454 {
+  width: 1rem;
+}
+
+.akx-455 {
+  width: 14rem;
+}
+
+.akx-456 {
+  width: 1.5rem;
+}
+
+.w-7 {
+  width: 1.75rem;
+}
+
+.akx-457 {
+  width: 18rem;
+}
+
+.akx-458 {
+  width: 2rem;
+}
+
+.akx-459 {
+  width: 2.25rem;
+}
+
+.akx-460 {
+  width: 24rem;
+}
+
+.akx-461 {
+  width: 1px;
+}
+
+.akx-462 {
+  width: 2px;
+}
+
+.akx-463 {
+  width: 420px;
+}
+
+.akx-464 {
+  width: 54%;
+}
+
+.akx-465 {
+  width: 78%;
+}
+
+.akx-466 {
+  width: 100%;
+}
+
+.akx-287 {
+  min-width: 0px;
+}
+
+.akx-256 {
+  max-width: 42rem;
+}
+
+.akx-257 {
+  max-width: 48rem;
+}
+
+.akx-258 {
+  max-width: 56rem;
+}
+
+.akx-259 {
+  max-width: 64rem;
+}
+
+.akx-260 {
+  max-width: 72rem;
+}
+
+.akx-261 {
+  max-width: 80rem;
+}
+
+.max-w-lg {
+  max-width: 32rem;
+}
+
+.akx-262 {
+  max-width: 28rem;
+}
+
+.akx-263 {
+  max-width: 36rem;
+}
+
+.akx-144 {
+  flex: 1 1 0%;
+}
+
+.akx-359 {
+  flex-shrink: 0;
+}
+
+.akx-009 {
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.akx-010 {
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.akx-013 {
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.akx-335 {
+  resize: none;
+}
+
+.akx-176 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.akx-177 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.akx-178 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.akx-179 {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.akx-145 {
+  flex-direction: column;
+}
+
+.akx-146 {
+  flex-wrap: wrap;
+}
+
+.akx-228 {
+  align-items: flex-start;
+}
+
+.akx-227 {
+  align-items: flex-end;
+}
+
+.akx-226 {
+  align-items: center;
+}
+
+.akx-229 {
+  align-items: stretch;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.akx-231 {
+  justify-content: center;
+}
+
+.akx-230 {
+  justify-content: space-between;
+}
+
+.akx-164 {
+  gap: 0.25rem;
+}
+
+.akx-165 {
+  gap: 0.375rem;
+}
+
+.akx-166 {
+  gap: 3rem;
+}
+
+.akx-167 {
+  gap: 0.5rem;
+}
+
+.akx-168 {
+  gap: 0.625rem;
+}
+
+.akx-169 {
+  gap: 0.875rem;
+}
+
+.akx-170 {
+  gap: 1rem;
+}
+
+.akx-171 {
+  gap: 1.25rem;
+}
+
+.akx-172 {
+  gap: 1.5rem;
+}
+
+.akx-173 {
+  gap: 2rem;
+}
+
+.akx-380 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
+}
+
+.akx-380\.5 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.375rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.375rem * var(--tw-space-y-reverse));
+}
+
+.akx-381 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+
+.akx-382 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
+}
+
+.akx-383 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+}
+
+.akx-303 {
+  overflow: hidden;
+}
+
+.akx-304 {
+  overflow: visible;
+}
+
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
+.akx-439 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.akx-339 {
+  border-radius: 0.25rem;
+}
+
+.akx-340 {
+  border-radius: 1rem;
+}
+
+.akx-341 {
+  border-radius: 1.5rem;
+}
+
+.akx-342 {
+  border-radius: 10px;
+}
+
+.akx-343 {
+  border-radius: 9999px;
+}
+
+.akx-344 {
+  border-radius: 0.5rem;
+}
+
+.akx-345 {
+  border-radius: 0.75rem;
+}
+
+.akx-070 {
+  border-width: 1px;
+}
+
+.akx-071 {
+  border-width: 3px;
+}
+
+.akx-075 {
+  border-bottom-width: 1px;
+}
+
+.akx-094 {
+  border-top-width: 1px;
+}
+
+.akx-083 {
+  border-style: dashed;
+}
+
+.akx-072 {
+  border-color: rgb(251 191 36 / 0.2);
+}
+
+.akx-073 {
+  border-color: rgb(251 191 36 / 0.25);
+}
+
+.akx-074 {
+  border-color: rgb(251 191 36 / 0.3);
+}
+
+.akx-076 {
+  border-color: rgb(96 165 250 / 0.25);
+}
+
+.akx-077 {
+  border-color: rgb(96 165 250 / 0.3);
+}
+
+.akx-078 {
+  --tw-border-opacity: 1;
+  border-color: rgb(34 211 238 / var(--tw-border-opacity, 1));
+}
+
+.akx-079 {
+  border-color: rgb(34 211 238 / 0.2);
+}
+
+.akx-080 {
+  border-color: rgb(34 211 238 / 0.25);
+}
+
+.akx-081 {
+  border-color: rgb(34 211 238 / 0.3);
+}
+
+.akx-082 {
+  border-color: rgb(34 211 238 / 0.35);
+}
+
+.akx-078\/40 {
+  border-color: rgb(34 211 238 / 0.4);
+}
+
+.akx-084 {
+  --tw-border-opacity: 1;
+  border-color: rgb(52 211 153 / var(--tw-border-opacity, 1));
+}
+
+.akx-085 {
+  border-color: rgb(52 211 153 / 0.2);
+}
+
+.akx-086 {
+  border-color: rgb(52 211 153 / 0.25);
+}
+
+.akx-087 {
+  border-color: rgb(52 211 153 / 0.3);
+}
+
+.akx-088 {
+  border-color: rgb(129 140 248 / 0.3);
+}
+
+.akx-089 {
+  border-color: rgb(244 114 182 / 0.3);
+}
+
+.akx-090 {
+  --tw-border-opacity: 1;
+  border-color: rgb(192 132 252 / var(--tw-border-opacity, 1));
+}
+
+.akx-091 {
+  border-color: rgb(192 132 252 / 0.2);
+}
+
+.akx-092 {
+  border-color: rgb(192 132 252 / 0.25);
+}
+
+.akx-093 {
+  border-color: rgb(192 132 252 / 0.3);
+}
+
+.akx-095 {
+  border-color: rgb(255 255 255 / 0.1);
+}
+
+.akx-096 {
+  border-color: rgb(255 255 255 / 0.05);
+}
+
+.akx-097 {
+  border-color: rgb(255 255 255 / 0.06);
+}
+
+.akx-098 {
+  border-color: rgb(255 255 255 / 0.08);
+}
+
+.bg-\[\#05070b\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(5 7 11 / var(--tw-bg-opacity, 1));
+}
+
+.akx-017 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(6 8 13 / var(--tw-bg-opacity, 1));
+}
+
+.akx-018 {
+  background-color: rgb(6 8 13 / 0.8);
+}
+
+.akx-019 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(7 10 17 / var(--tw-bg-opacity, 1));
+}
+
+.akx-020 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(8 12 20 / var(--tw-bg-opacity, 1));
+}
+
+.akx-021 {
+  background-color: rgb(9 13 22 / 0.95);
+}
+
+.akx-022 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(12 18 32 / var(--tw-bg-opacity, 1));
+}
+
+.akx-023 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(13 17 26 / var(--tw-bg-opacity, 1));
+}
+
+.akx-024 {
+  background-color: rgb(13 19 32 / 0.95);
+}
+
+.akx-025 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(14 19 31 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[\#0e1525\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(14 21 37 / var(--tw-bg-opacity, 1));
+}
+
+.akx-026 {
+  background-color: rgb(245 158 11 / 0.1);
+}
+
+.akx-027 {
+  background-color: rgb(245 158 11 / 0.15);
+}
+
+.akx-028 {
+  background-color: rgb(245 158 11 / 0.2);
+}
+
+.bg-black\/80 {
+  background-color: rgb(0 0 0 / 0.8);
+}
+
+.akx-029 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(96 165 250 / var(--tw-bg-opacity, 1));
+}
+
+.akx-030 {
+  background-color: rgb(59 130 246 / 0.1);
+}
+
+.akx-031 {
+  background-color: rgb(59 130 246 / 0.15);
+}
+
+.akx-032 {
+  background-color: rgb(59 130 246 / 0.2);
+}
+
+.akx-033 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 211 238 / var(--tw-bg-opacity, 1));
+}
+
+.akx-034 {
+  background-color: rgb(6 182 212 / 0.1);
+}
+
+.akx-035 {
+  background-color: rgb(6 182 212 / 0.15);
+}
+
+.akx-036 {
+  background-color: rgb(6 182 212 / 0.2);
+}
+
+.akx-037 {
+  background-color: rgb(6 182 212 / 0.5);
+}
+
+.akx-038 {
+  background-color: rgb(6 182 212 / 0.7);
+}
+
+.akx-039 {
+  background-color: rgb(16 185 129 / 0.1);
+}
+
+.akx-040 {
+  background-color: rgb(16 185 129 / 0.15);
+}
+
+.akx-041 {
+  background-color: rgb(16 185 129 / 0.2);
+}
+
+.akx-047 {
+  background-color: rgb(99 102 241 / 0.1);
+}
+
+.akx-048 {
+  background-color: rgb(99 102 241 / 0.2);
+}
+
+.akx-049 {
+  background-color: rgb(99 102 241 / 0.6);
+}
+
+.akx-050 {
+  background-color: rgb(236 72 153 / 0.2);
+}
+
+.akx-051 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(168 85 247 / var(--tw-bg-opacity, 1));
+}
+
+.akx-052 {
+  background-color: rgb(168 85 247 / 0.1);
+}
+
+.akx-053 {
+  background-color: rgb(168 85 247 / 0.15);
+}
+
+.akx-054 {
+  background-color: rgb(168 85 247 / 0.2);
+}
+
+.akx-055 {
+  background-color: rgb(168 85 247 / 0.35);
+}
+
+.akx-056 {
+  background-color: rgb(168 85 247 / 0.5);
+}
+
+.akx-057 {
+  background-color: rgb(168 85 247 / 0.7);
+}
+
+.akx-058 {
+  background-color: rgb(147 51 234 / 0.1);
+}
+
+.akx-059 {
+  background-color: rgb(100 116 139 / 0.1);
+}
+
+.akx-060 {
+  background-color: rgb(20 184 166 / 0.1);
+}
+
+.akx-061 {
+  background-color: rgb(255 255 255 / 0.1);
+}
+
+.akx-062 {
+  background-color: rgb(255 255 255 / 0.05);
+}
+
+.akx-063 {
+  background-color: rgb(255 255 255 / 0.03);
+}
+
+.akx-064 {
+  background-color: rgb(255 255 255 / 0.04);
+}
+
+.akx-065 {
+  background-color: rgb(255 255 255 / 0.05);
+}
+
+.akx-042 {
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+}
+
+.akx-043 {
+  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+}
+
+.akx-044 {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.akx-045 {
+  background-image: linear-gradient(to top right, var(--tw-gradient-stops));
+}
+
+.akx-156 {
+  --tw-gradient-from: #091f1a var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(9 31 26 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.akx-157 {
+  --tw-gradient-from: #0c192c var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(12 25 44 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.akx-158 {
+  --tw-gradient-from: #141824 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(20 24 36 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.akx-159 {
+  --tw-gradient-from: #1b102c var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(27 16 44 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.akx-160 {
+  --tw-gradient-from: #fbbf24 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(251 191 36 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.akx-161 {
+  --tw-gradient-from: #22d3ee var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(34 211 238 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.akx-162 {
+  --tw-gradient-from: rgb(6 182 212 / 0.2) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(6 182 212 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.akx-163 {
+  --tw-gradient-from: #c084fc var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(192 132 252 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.akx-442 {
+  --tw-gradient-to: rgb(11 19 34 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), #0b1322 var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
+.akx-443 {
+  --tw-gradient-to: rgb(11 23 24 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), #0b1718 var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
+.akx-444 {
+  --tw-gradient-to: rgb(14 18 28 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), #0e121c var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
+.akx-445 {
+  --tw-gradient-to: rgb(18 14 33 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), #120e21 var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
+.akx-446 {
+  --tw-gradient-to: rgb(59 130 246 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), #3b82f6 var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
+.akx-447 {
+  --tw-gradient-to: rgb(59 130 246 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), rgb(59 130 246 / 0.15) var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
+.akx-419 {
+  --tw-gradient-to: #080a10 var(--tw-gradient-to-position);
+}
+
+.akx-420 {
+  --tw-gradient-to: #080b14 var(--tw-gradient-to-position);
+}
+
+.akx-421 {
+  --tw-gradient-to: #080d14 var(--tw-gradient-to-position);
+}
+
+.akx-422 {
+  --tw-gradient-to: #080d17 var(--tw-gradient-to-position);
+}
+
+.akx-423 {
+  --tw-gradient-to: #60a5fa var(--tw-gradient-to-position);
+}
+
+.akx-424 {
+  --tw-gradient-to: #22d3ee var(--tw-gradient-to-position);
+}
+
+.akx-425 {
+  --tw-gradient-to: #9333ea var(--tw-gradient-to-position);
+}
+
+.akx-426 {
+  --tw-gradient-to: rgb(147 51 234 / 0.25) var(--tw-gradient-to-position);
+}
+
+.akx-297 {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.akx-305 {
+  padding: 0.375rem;
+}
+
+.akx-306 {
+  padding: 0.5rem;
+}
+
+.akx-307 {
+  padding: 1rem;
+}
+
+.akx-308 {
+  padding: 1.5rem;
+}
+
+.akx-309 {
+  padding: 1.5px;
+}
+
+.akx-319 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.akx-320 {
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+}
+
+.akx-321 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.akx-322 {
+  padding-left: 0.875rem;
+  padding-right: 0.875rem;
+}
+
+.akx-323 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.akx-324 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.akx-325 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.akx-326 {
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+}
+
+.akx-327 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.akx-328 {
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+}
+
+.akx-329 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.akx-330 {
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+}
+
+.akx-331 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.akx-332 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.akx-333 {
+  padding-top: 0.875rem;
+  padding-bottom: 0.875rem;
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.akx-310 {
+  padding-bottom: 5rem;
+}
+
+.akx-311 {
+  padding-bottom: 1rem;
+}
+
+.akx-312 {
+  padding-left: 0.25rem;
+}
+
+.akx-315 {
+  padding-top: 0.25rem;
+}
+
+.akx-316 {
+  padding-top: 0.5rem;
+}
+
+.akx-317 {
+  padding-top: 7rem;
+}
+
+.akx-318 {
+  padding-top: 1rem;
+}
+
+.akx-405 {
+  text-align: left;
+}
+
+.akx-395 {
+  text-align: center;
+}
+
+.akx-154 {
+  font-family: "JetBrains Mono", monospace;
+}
+
+.akx-384 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.akx-385 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.akx-386 {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.akx-387 {
+  font-size: 10px;
+}
+
+.akx-388 {
+  font-size: 11px;
+}
+
+.akx-389 {
+  font-size: 9px;
+}
+
+.akx-392 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.akx-406 {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.akx-415 {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.akx-418 {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.akx-151 {
+  font-weight: 700;
+}
+
+.akx-152 {
+  font-weight: 800;
+}
+
+.akx-153 {
+  font-weight: 500;
+}
+
+.akx-155 {
+  font-weight: 600;
+}
+
+.akx-441 {
+  text-transform: uppercase;
+}
+
+.akx-232 {
+  line-height: 1.12;
+}
+
+.akx-233 {
+  line-height: 1;
+}
+
+.akx-234 {
+  line-height: 1.625;
+}
+
+.akx-235 {
+  line-height: 1.25;
+}
+
+.akx-431 {
+  letter-spacing: 0.22em;
+}
+
+.akx-432 {
+  letter-spacing: 0.2em;
+}
+
+.akx-433 {
+  letter-spacing: -0.025em;
+}
+
+.akx-434 {
+  letter-spacing: 0.05em;
+}
+
+.akx-435 {
+  letter-spacing: 0.1em;
+}
+
+.akx-390 {
+  --tw-text-opacity: 1;
+  color: rgb(252 211 77 / var(--tw-text-opacity, 1));
+}
+
+.akx-391 {
+  --tw-text-opacity: 1;
+  color: rgb(251 191 36 / var(--tw-text-opacity, 1));
+}
+
+.akx-393 {
+  --tw-text-opacity: 1;
+  color: rgb(147 197 253 / var(--tw-text-opacity, 1));
+}
+
+.akx-394 {
+  --tw-text-opacity: 1;
+  color: rgb(96 165 250 / var(--tw-text-opacity, 1));
+}
+
+.akx-396 {
+  --tw-text-opacity: 1;
+  color: rgb(103 232 249 / var(--tw-text-opacity, 1));
+}
+
+.akx-397 {
+  --tw-text-opacity: 1;
+  color: rgb(34 211 238 / var(--tw-text-opacity, 1));
+}
+
+.akx-398 {
+  color: rgb(34 211 238 / 0.7);
+}
+
+.akx-399 {
+  color: rgb(34 211 238 / 0.9);
+}
+
+.akx-400 {
+  --tw-text-opacity: 1;
+  color: rgb(110 231 183 / var(--tw-text-opacity, 1));
+}
+
+.akx-401 {
+  --tw-text-opacity: 1;
+  color: rgb(52 211 153 / var(--tw-text-opacity, 1));
+}
+
+.akx-403 {
+  --tw-text-opacity: 1;
+  color: rgb(165 180 252 / var(--tw-text-opacity, 1));
+}
+
+.akx-404 {
+  --tw-text-opacity: 1;
+  color: rgb(129 140 248 / var(--tw-text-opacity, 1));
+}
+
+.akx-407 {
+  --tw-text-opacity: 1;
+  color: rgb(244 114 182 / var(--tw-text-opacity, 1));
+}
+
+.akx-408 {
+  --tw-text-opacity: 1;
+  color: rgb(216 180 254 / var(--tw-text-opacity, 1));
+}
+
+.akx-409 {
+  --tw-text-opacity: 1;
+  color: rgb(192 132 252 / var(--tw-text-opacity, 1));
+}
+
+.akx-410 {
+  --tw-text-opacity: 1;
+  color: rgb(251 113 133 / var(--tw-text-opacity, 1));
+}
+
+.akx-411 {
+  --tw-text-opacity: 1;
+  color: rgb(226 232 240 / var(--tw-text-opacity, 1));
+}
+
+.akx-412 {
+  --tw-text-opacity: 1;
+  color: rgb(203 213 225 / var(--tw-text-opacity, 1));
+}
+
+.akx-413 {
+  --tw-text-opacity: 1;
+  color: rgb(148 163 184 / var(--tw-text-opacity, 1));
+}
+
+.akx-414 {
+  --tw-text-opacity: 1;
+  color: rgb(100 116 139 / var(--tw-text-opacity, 1));
+}
+
+.text-slate-950 {
+  --tw-text-opacity: 1;
+  color: rgb(2 6 23 / var(--tw-text-opacity, 1));
+}
+
+.akx-416 {
+  --tw-text-opacity: 1;
+  color: rgb(94 234 212 / var(--tw-text-opacity, 1));
+}
+
+.akx-417 {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.akx-014 {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.akx-313::-moz-placeholder {
+  --tw-placeholder-opacity: 1;
+  color: rgb(71 85 105 / var(--tw-placeholder-opacity, 1));
+}
+
+.akx-313::placeholder {
+  --tw-placeholder-opacity: 1;
+  color: rgb(71 85 105 / var(--tw-placeholder-opacity, 1));
+}
+
+.akx-298 {
+  opacity: 0;
+}
+
+.akx-299 {
+  opacity: 0.5;
+}
+
+.akx-300 {
+  opacity: 0.8;
+}
+
+.shadow-2xl {
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.akx-349 {
+  --tw-shadow: 0 0 10px #60a5fa;
+  --tw-shadow-colored: 0 0 10px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.akx-350 {
+  --tw-shadow: 0 0 12px #22d3ee;
+  --tw-shadow-colored: 0 0 12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.akx-351 {
+  --tw-shadow: 0 0 12px #a855f7;
+  --tw-shadow-colored: 0 0 12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.akx-352 {
+  --tw-shadow: 0 0 15px #10b981;
+  --tw-shadow-colored: 0 0 15px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.akx-353 {
+  --tw-shadow: 0 0 15px #22d3ee;
+  --tw-shadow-colored: 0 0 15px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.akx-354 {
+  --tw-shadow: 0 0 15px #a855f7;
+  --tw-shadow-colored: 0 0 15px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-\[0_0_45px_rgba\(34\2c 211\2c 238\2c 0\.25\)\] {
+  --tw-shadow: 0 0 45px rgba(34,211,238,0.25);
+  --tw-shadow-colored: 0 0 45px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-\[inset_0_0_60px_rgba\(34\2c 211\2c 238\2c 0\.04\)\] {
+  --tw-shadow: inset 0 0 60px rgba(34,211,238,0.04);
+  --tw-shadow-colored: inset 0 0 60px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.akx-358 {
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.akx-357 {
+  --tw-shadow-color: rgb(6 182 212 / 0.2);
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.blur {
+  --tw-blur: blur(8px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.akx-067 {
+  --tw-blur: blur(40px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.akx-068 {
+  --tw-blur: blur(120px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.akx-069 {
+  --tw-blur: blur(130px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.akx-015 {
+  --tw-backdrop-blur: blur(12px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
+.akx-016 {
+  --tw-backdrop-blur: blur(24px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
+.backdrop-filter {
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.akx-436 {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.akx-437 {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.akx-438 {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.akx-102 {
+  transition-duration: 300ms;
+}
+
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.akx-347 *::-moz-selection {
+  background-color: rgb(6 182 212 / 0.3);
+}
+
+.akx-347 *::selection {
+  background-color: rgb(6 182 212 / 0.3);
+}
+
+.akx-348 *::-moz-selection {
+  --tw-text-opacity: 1;
+  color: rgb(165 243 252 / var(--tw-text-opacity, 1));
+}
+
+.akx-348 *::selection {
+  --tw-text-opacity: 1;
+  color: rgb(165 243 252 / var(--tw-text-opacity, 1));
+}
+
+.akx-347::-moz-selection {
+  background-color: rgb(6 182 212 / 0.3);
+}
+
+.akx-347::selection {
+  background-color: rgb(6 182 212 / 0.3);
+}
+
+.akx-348::-moz-selection {
+  --tw-text-opacity: 1;
+  color: rgb(165 243 252 / var(--tw-text-opacity, 1));
+}
+
+.akx-348::selection {
+  --tw-text-opacity: 1;
+  color: rgb(165 243 252 / var(--tw-text-opacity, 1));
+}
+
+.akx-212:hover {
+  border-color: rgb(34 211 238 / 0.4);
+}
+
+.akx-213:hover {
+  border-color: rgb(34 211 238 / 0.5);
+}
+
+.akx-214:hover {
+  border-color: rgb(192 132 252 / 0.5);
+}
+
+.akx-208:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(21 28 46 / var(--tw-bg-opacity, 1));
+}
+
+.akx-209:hover {
+  background-color: rgb(6 182 212 / 0.2);
+}
+
+.akx-210:hover {
+  background-color: rgb(168 85 247 / 0.2);
+}
+
+.hover\:bg-white\/10:hover {
+  background-color: rgb(255 255 255 / 0.1);
+}
+
+.akx-211:hover {
+  background-color: rgb(255 255 255 / 0.05);
+}
+
+.akx-215:hover {
+  --tw-text-opacity: 1;
+  color: rgb(252 211 77 / var(--tw-text-opacity, 1));
+}
+
+.akx-216:hover {
+  --tw-text-opacity: 1;
+  color: rgb(103 232 249 / var(--tw-text-opacity, 1));
+}
+
+.akx-217:hover {
+  --tw-text-opacity: 1;
+  color: rgb(34 211 238 / var(--tw-text-opacity, 1));
+}
+
+.akx-218:hover {
+  --tw-text-opacity: 1;
+  color: rgb(110 231 183 / var(--tw-text-opacity, 1));
+}
+
+.akx-219:hover {
+  --tw-text-opacity: 1;
+  color: rgb(216 180 254 / var(--tw-text-opacity, 1));
+}
+
+.akx-220:hover {
+  --tw-text-opacity: 1;
+  color: rgb(192 132 252 / var(--tw-text-opacity, 1));
+}
+
+.akx-221:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.akx-149:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(34 211 238 / var(--tw-border-opacity, 1));
+}
+
+.akx-150:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.akx-180:hover .akx-186 {
+  --tw-translate-x: 0.25rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.akx-180:hover .akx-181 {
+  --tw-text-opacity: 1;
+  color: rgb(251 191 36 / var(--tw-text-opacity, 1));
+}
+
+.akx-180:hover .akx-182 {
+  --tw-text-opacity: 1;
+  color: rgb(34 211 238 / var(--tw-text-opacity, 1));
+}
+
+.akx-180:hover .akx-183 {
+  --tw-text-opacity: 1;
+  color: rgb(52 211 153 / var(--tw-text-opacity, 1));
+}
+
+.akx-180:hover .akx-184 {
+  --tw-text-opacity: 1;
+  color: rgb(192 132 252 / var(--tw-text-opacity, 1));
+}
+
+.akx-180:hover .akx-185 {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+@media (min-width: 640px) {
+  .akx-366 {
+    left: 0px;
+  }
+
+  .akx-370 {
+    right: 0px;
+  }
+
+  .akx-363 {
+    height: 16rem;
+  }
+
+  .akx-364 {
+    height: 20rem;
+  }
+
+  .akx-365 {
+    height: 360px;
+  }
+
+  .akx-378 {
+    width: 16rem;
+  }
+
+  .akx-379 {
+    width: 20rem;
+  }
+
+  .akx-362 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sm\:flex-row {
+    flex-direction: row;
+  }
+
+  .akx-367 {
+    padding: 1.75rem;
+  }
+
+  .akx-368 {
+    padding: 2rem;
+  }
+
+  .akx-369 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .akx-371 {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .akx-372 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .akx-373 {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .akx-374 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .akx-375 {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .akx-376 {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .akx-377 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .akx-282 {
+    left: 50%;
+  }
+
+  .akx-283 {
+    margin-left: 0px;
+  }
+
+  .akx-284 {
+    margin-top: 0px;
+  }
+
+  .akx-277 {
+    display: block;
+  }
+
+  .akx-285 {
+    width: 45%;
+  }
+
+  .akx-276 {
+    --tw-translate-x: -50%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .akx-279 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .akx-280 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .akx-278 {
+    flex-direction: row;
+  }
+
+  .akx-281 {
+    align-items: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .akx-238 {
+    grid-column: span 5 / span 5;
+  }
+
+  .akx-239 {
+    grid-column: span 7 / span 7;
+  }
+
+  .akx-248 {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .akx-240 {
+    display: flex;
+  }
+
+  .akx-246 {
+    display: none;
+  }
+
+  .akx-244 {
+    height: 18rem;
+  }
+
+  .akx-245 {
+    height: 350px;
+  }
+
+  .akx-254 {
+    width: 18rem;
+  }
+
+  .akx-255 {
+    width: 350px;
+  }
+
+  .akx-242 {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  .akx-243 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .akx-247 {
+    justify-content: flex-start;
+  }
+
+  .akx-241 {
+    gap: 2rem;
+  }
+
+  .akx-251 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .akx-249 {
+    padding-bottom: 7rem;
+  }
+
+  .akx-250 {
+    padding-top: 9rem;
+  }
+
+  .akx-253 {
+    text-align: left;
+  }
+
+  .akx-252 {
+    font-size: 3.5rem;
+  }
+}
+
+
+  .akx-250 {
+    padding-top: 8rem !important;
+  }
+
+  header#navbar {
+        background: transparent !important;
+  }
+
+
+
+
+/* ==================== MINIMALIST DARK FOOTER ==================== */
+
+.akh-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    background: #05070b;
+    padding: 2rem 0;
+}
+
+.akh-footer-container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.akh-footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+.akh-footer-logo {
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 0.5rem;
+    background: linear-gradient(to bottom right, #22d3ee, #9333ea);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: monospace;
+    font-weight: 700;
+    font-size: 0.75rem;
+    color: #020617;
+}
+
+.akh-footer-name {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+}
+
+.akh-footer-copyright {
+    font-size: 0.75rem;
+    color: #64748b;
+    text-align: center;
+}
+
+.akh-footer-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.75rem;
+    color: #94a3b8;
+}
+
+.akh-footer-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.akh-footer-links a:hover {
+    color: #22d3ee;
+}
+
+/* ==================== SCROLL TO TOP BUTTON ==================== */
+
+.akh-scroll-top {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 40;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 9999px;
+    background: linear-gradient(90deg, #06b6d4, #3b82f6, #9333ea);
+    background-size: 200% auto;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    box-shadow: 0 4px 20px -4px rgba(34, 211, 238, 0.4);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.akh-scroll-top.akh-scroll-visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.akh-scroll-top:hover {
+    background-position: right center;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px -4px rgba(34, 211, 238, 0.55);
+}
+
+/* ==================== RESPONSIVE FOOTER ==================== */
+
+@media (min-width: 640px) {
+    .akh-footer-container {
+        flex-direction: row;
+    }
+}
+
+
+.triggerResumeToast {
+  border: 1px solid rgb(255 255 255 / 0.1) !important;
+  /* background-color: rgb(14 19 31 / (1, 1)) !important; */
+}
+  </style>
+</head>
+<body>
+
+<div class="akx-046 akx-014 akx-347 akx-348">
+
+<!-- ==================== 1. STICKY GLASSMORPHIC TOP NAVBAR ==================== -->
+  <header id="navbar" class="akx-142 akx-427 akx-225 akx-468 akx-436 akx-102 akx-018 akx-016 akx-075 akx-097">
+    <div class="akx-261 akx-295 akx-323 akx-369 akx-251 akx-191 akx-143 akx-226 akx-230">
+      <!-- Left Brand Mark -->
+      <a href="#home" class="akx-143 akx-226 akx-168 akx-180">
+        <div class="akx-459 akx-202 akx-345 akx-043 akx-161 akx-446 akx-425 akx-309 akx-358 akx-357">
+          <div class="akx-466 akx-206 akx-020 akx-342 akx-143 akx-226 akx-231 akx-154 akx-151 akx-415 akx-397 akx-185 akx-437">
+            AM
+          </div>
+        </div>
+        <div class="akx-235">
+          <span class="akx-066 akx-418 akx-376 akx-152 akx-434 akx-417">AKHASH A M</span>
+          <span class="akx-066 akx-154 akx-387 akx-432 akx-399 akx-441">MIS Executive</span>
+        </div>
+      </a>
+
+      <!-- Center Navigation Links -->
+      <nav class="akx-207 akx-240 akx-226 akx-164 akx-063 akx-070 akx-097 akx-343 akx-319 akx-327">
+        <a href="#home" class="akx-296 akx-012 akx-322 akx-328 akx-343 akx-418 akx-153 akx-397 akx-034 akx-436">Home</a>
+        <a href="#about" class="akx-296 akx-322 akx-328 akx-343 akx-418 akx-153 akx-413 akx-221 akx-436">About</a>
+        <a href="#skills" class="akx-296 akx-322 akx-328 akx-343 akx-418 akx-153 akx-413 akx-221 akx-436">Skills</a>
+        <a href="#experience" class="akx-296 akx-322 akx-328 akx-343 akx-418 akx-153 akx-413 akx-221 akx-436">Experience</a>
+        <a href="#projects" class="akx-296 akx-322 akx-328 akx-343 akx-418 akx-153 akx-413 akx-221 akx-436">Projects</a>
+        <a href="#services" class="akx-296 akx-322 akx-328 akx-343 akx-418 akx-153 akx-413 akx-221 akx-436">Services</a>
+        <a href="#certifications" class="akx-296 akx-322 akx-328 akx-343 akx-418 akx-153 akx-413 akx-221 akx-436">Certifications</a>
+        <a href="#contact" class="akx-296 akx-322 akx-328 akx-343 akx-418 akx-153 akx-413 akx-221 akx-436">Contact</a>
+      </nav>
+
+      <!-- Right CTA & Mobile Menu Toggle -->
+      <div class="akx-143 akx-226 akx-168">
+        <a href="#contact" class="akx-101 akx-323 akx-329 akx-343 akx-418 akx-155 akx-417 akx-143 akx-226 akx-165">
+          <span>Hire Me</span>
+          <i class="akx-139 akx-103 akx-387"></i>
+        </a>
+        <button id="mobile-menu-btn" aria-label="Toggle Menu" class="akx-246 akx-459 akx-202 akx-345 akx-065 akx-070 akx-095 akx-143 akx-226 akx-231 akx-412 akx-217 akx-437">
+          <i class="akx-139 akx-107 akx-415"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div id="mobile-menu" class="akx-207 akx-246 akx-021 akx-016 akx-075 akx-095 akx-323 akx-316 akx-311 akx-380">
+      <a href="#home" class="akx-289 akx-066 akx-321 akx-329 akx-344 akx-415 akx-153 akx-397 akx-034">Home</a>
+      <a href="#about" class="akx-289 akx-066 akx-321 akx-329 akx-344 akx-415 akx-153 akx-412 akx-211">About</a>
+      <a href="#skills" class="akx-289 akx-066 akx-321 akx-329 akx-344 akx-415 akx-153 akx-412 akx-211">Skills</a>
+      <a href="#experience" class="akx-289 akx-066 akx-321 akx-329 akx-344 akx-415 akx-153 akx-412 akx-211">Experience</a>
+      <a href="#projects" class="akx-289 akx-066 akx-321 akx-329 akx-344 akx-415 akx-153 akx-412 akx-211">Projects</a>
+      <a href="#services" class="akx-289 akx-066 akx-321 akx-329 akx-344 akx-415 akx-153 akx-412 akx-211">Services</a>
+      <a href="#certifications" class="akx-289 akx-066 akx-321 akx-329 akx-344 akx-415 akx-153 akx-412 akx-211">Certifications</a>
+      <a href="#contact" class="akx-289 akx-066 akx-321 akx-329 akx-344 akx-415 akx-153 akx-412 akx-211">Contact</a>
+    </div>
+  </header>
+
+  <!-- ==================== 2. HERO SECTION (2-COLUMN SPLIT) ==================== -->
+  <section id="home" class="akx-334 akx-317 akx-310 akx-250 akx-249 akx-303">
+    <!-- Ambient Background Glow Orbs -->
+    <div class="akx-314 akx-011 akx-008 akx-004 akx-460 akx-203 akx-034 akx-343 akx-068"></div>
+    <div class="akx-314 akx-011 akx-429 akx-337 akx-463 akx-205 akx-058 akx-343 akx-069"></div>
+
+    <div class="akx-261 akx-295 akx-323 akx-369 akx-251">
+      <div class="akx-175 akx-176 akx-242 akx-166 akx-241 akx-226">
+        <!-- Left Column -->
+        <div class="akx-239 akx-383 akx-395 akx-253 akx-336 akx-448">
+          <!-- Monospace Eyebrow Pill -->
+          <div class="akx-222 akx-226 akx-167 akx-322 akx-328 akx-343 akx-034 akx-070 akx-080 akx-396 akx-154 akx-388 akx-435 akx-441">
+            <span class="akx-451 akx-192 akx-343 akx-033 akx-013"></span>
+            <span>Hello, Welcome to my Portfolio</span>
+          </div>
+
+          <!-- Main Heading -->
+          <h1 class="akx-386 akx-373 akx-252 akx-152 akx-433 akx-232 akx-417">
+            Hi, I'm <br />
+            <span class="akx-402">Akhash A M</span>
+          </h1>
+
+          <!-- Typing Subtitle -->
+          <div class="akx-143 akx-226 akx-231 akx-247 akx-167 akx-406 akx-377 akx-155 akx-396 akx-154">
+            <span class="akx-414">&gt;</span>
+            <span id="typing-role">MIS Executive</span><span class="akx-440"></span>
+          </div>
+
+          <!-- Bio Paragraph -->
+          <p class="akx-413 akx-415 akx-374 akx-234 akx-263 akx-295 akx-248">
+            B.Sc. Computer Science graduate skilled in MIS reporting, KPI monitoring and data validation. I build dashboards using <span class="akx-411 akx-153">Advanced Excel (Power Query, Power Pivot, DAX) and SQL Server (T-SQL)</span> to turn business data into clear, accurate reports.
+          </p>
+
+          <!-- CTA Buttons & Social Icons -->
+          <div class="akx-143 akx-146 akx-226 akx-231 akx-247 akx-169 akx-315">
+            <a href="#projects" class="akx-101 akx-325 akx-332 akx-345 akx-415 akx-155 akx-417 akx-143 akx-226 akx-167">
+              <span>View Projects</span>
+              <i class="akx-139 akx-113 akx-418"></i>
+            </a>
+            <a href="https://thewebsitedemo.in/akhash-new/wp-content/themes/hello-elementor-child/Akhash_AM_Resume.pdf" target="_blank"><button onclick="triggerResumeToast()" class="triggerResumeToast akx-324 akx-332 akx-345 akx-415 akx-155 akx-411 akx-025 akx-208 akx-070 akx-095 akx-212 akx-436 akx-143 akx-226 akx-167">
+              <i class="akx-139 akx-120 akx-397 akx-418"></i>
+              <span>Download CV</span>
+            </button></a>
+            <div class="akx-143 akx-226 akx-167 akx-312">
+              <a href="https://linkedin.com/in/akhash-akhash-a32b7844b" target="_blank" rel="noreferrer" aria-label="LinkedIn" class="akx-449 akx-188 akx-345 akx-025 akx-070 akx-095 akx-213 akx-217 akx-413 akx-143 akx-226 akx-231 akx-436">
+                <i class="fa-brands fa-linkedin-in text-sm"></i>
+              </a>
+              <a href="https://github.com/akhash5" target="_blank" rel="noreferrer" aria-label="GitHub" class="akx-449 akx-188 akx-345 akx-025 akx-070 akx-095 akx-214 akx-220 akx-413 akx-143 akx-226 akx-231 akx-436">
+                <i class="fa-brands fa-github text-sm"></i>
+              </a>
+              <a href="mailto:akhash3005@gmail.com" aria-label="Email" class="akx-449 akx-188 akx-345 akx-025 akx-070 akx-095 akx-213 akx-217 akx-413 akx-143 akx-226 akx-231 akx-436">
+                <i class="fa-solid fa-envelope text-sm"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Key Metrics Row -->
+          <div class="akx-318 akx-143 akx-226 akx-231 akx-247 akx-173 akx-094 akx-097 akx-262 akx-295 akx-248">
+            <div>
+              <div class="akx-384 akx-371 akx-152 akx-402">4</div>
+              <div class="akx-418 akx-413 akx-153 akx-290">Analytics Dashboards</div>
+            </div>
+            <div class="akx-202 akx-461 akx-061"></div>
+            <div>
+              <div class="akx-384 akx-371 akx-152 akx-401">3</div>
+              <div class="akx-418 akx-413 akx-153 akx-290">Core Data Tools</div>
+            </div>
+            <div class="akx-202 akx-461 akx-061"></div>
+            <div>
+              <div class="akx-384 akx-371 akx-152 akx-409">100%</div>
+              <div class="akx-418 akx-413 akx-153 akx-290">Data-Driven Focus</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Glowing Circular Orbital Portrait -->
+        <div class="akx-238 akx-143 akx-231 akx-226 akx-336 akx-448">
+          <div class="akx-334 akx-457 akx-200 akx-379 akx-364 akx-255 akx-245 akx-143 akx-226 akx-231">
+            <!-- Radial Ambient Backdrop -->
+            <div class="akx-011 akx-224 akx-343 akx-045 akx-162 akx-447 akx-426 akx-067"></div>
+
+            <!-- Outer Dashed Orbital Ring -->
+            <div class="akx-301 akx-011 akx-223 akx-343 akx-070 akx-083 akx-082">
+              <span class="akx-011 akx-007 akx-236 akx-009 akx-453 akx-194 akx-343 akx-033 akx-350"></span>
+              <span class="akx-011 akx-001 akx-236 akx-009 akx-452 akx-193 akx-343 akx-051 akx-351"></span>
+            </div>
+
+            <!-- Middle Counter-Rotating Orbital Ring -->
+            <div class="akx-302 akx-011 akx-224 akx-343 akx-070 akx-093">
+              <span class="akx-011 akx-428 akx-002 akx-010 akx-452 akx-193 akx-343 akx-029 akx-349"></span>
+            </div>
+
+            <!-- Inner Glowing Portrait Frame -->
+            <div class="akx-334 akx-455 akx-197 akx-378 akx-363 akx-254 akx-244 akx-343 akx-305 akx-042 akx-161 akx-446 akx-425 akx-355">
+              <div class="akx-466 akx-206  akx-343 akx-303 akx-022 akx-334 akx-143 akx-227 akx-231 portfolio-img">
+                <!-- Clean Professional Vector Portrait SVG (Guaranteed crisp, zero external broken links) -->
+                <img src="https://thewebsitedemo.in/akhash-new/wp-content/uploads/2026/11/1bf1bcec-ee98-4749-805d-6526eaec61fe-2-Photoroom.png" alt="">
+              </div>
+            </div>
+
+            <!-- Floating Analytics Pill Badge Top-Right -->
+            <div class="akx-147 akx-011 akx-006 akx-005 akx-370 akx-024 akx-070 akx-081 akx-015 akx-321 akx-328 akx-345 akx-358 akx-143 akx-226 akx-167">
+              <span class="akx-456 akx-198 akx-344 akx-036 akx-397 akx-143 akx-226 akx-231 akx-418">
+                <i class="fa-solid fa-chart-pie"></i>
+              </span>
+              <div class="akx-405">
+                <div class="akx-387 akx-154 akx-413 akx-233">MIS &amp; Reporting</div>
+                <div class="akx-418 akx-151 akx-417">Excel / DAX</div>
+              </div>
+            </div>
+
+            <!-- Floating Analytics Pill Badge Bottom-Left -->
+            <div class="akx-148 akx-011 akx-100 akx-003 akx-366 akx-024 akx-070 akx-093 akx-015 akx-321 akx-328 akx-345 akx-358 akx-143 akx-226 akx-167">
+              <span class="akx-456 akx-198 akx-344 akx-054 akx-409 akx-143 akx-226 akx-231 akx-418">
+                <i class="fa-solid fa-database"></i>
+              </span>
+              <div class="akx-405">
+                <div class="akx-387 akx-154 akx-413 akx-233">Database Querying</div>
+                <div class="akx-418 akx-151 akx-417">SQL Server / T-SQL</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 3. ABOUT SECTION (2x2 BENTO GRID) ==================== -->
+  <section id="about" class="akx-331 akx-334">
+    <div class="akx-260 akx-295 akx-323 akx-369 akx-251">
+      <!-- Centered Section Header -->
+      <div class="akx-395 akx-256 akx-295 akx-268 akx-336">
+        <span class="akx-154 akx-388 akx-441 akx-431 akx-397 akx-066 akx-270">Get To Know Me</span>
+        <h2 class="akx-385 akx-372 akx-152 akx-417 akx-433">
+          About <span class="akx-402">Akhash A M</span>
+        </h2>
+        <div class="akx-346"></div>
+        <p class="akx-413 akx-418 akx-376 akx-294 akx-234">
+          B.Sc. Computer Science graduate focused on MIS reporting, KPI monitoring and dashboard development.
+        </p>
+      </div>
+
+      <!-- 2x2 Bento Grid -->
+      <div class="akx-175 akx-176 akx-279 akx-172">
+        <!-- Card 1: Career Objective -->
+        <div class="akx-174 akx-340 akx-308 akx-367 akx-336">
+          <div class="akx-143 akx-226 akx-230 akx-274">
+            <div class="akx-450 akx-189 akx-345 akx-035 akx-070 akx-080 akx-397 akx-143 akx-226 akx-231 akx-406">
+              <i class="fa-solid fa-bullseye"></i>
+            </div>
+            <span class="akx-154 akx-387 akx-435 akx-441 akx-320 akx-327 akx-343 akx-034 akx-396 akx-070 akx-079">
+              Career Goal
+            </span>
+          </div>
+          <h3 class="akx-406 akx-151 akx-417 akx-271">Career Objective</h3>
+          <p class="akx-413 akx-415 akx-234">
+            Seeking an entry-level MIS Executive, Reporting Analyst or Data Analyst role in Dubai, using Advanced Excel and SQL Server to turn business data into clear, accurate management reports.
+          </p>
+        </div>
+
+        <!-- Card 2: Education -->
+        <div class="akx-174 akx-340 akx-308 akx-367 akx-336">
+          <div class="akx-143 akx-226 akx-230 akx-274">
+            <div class="akx-450 akx-189 akx-345 akx-053 akx-070 akx-092 akx-409 akx-143 akx-226 akx-231 akx-406">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <span class="akx-154 akx-387 akx-435 akx-441 akx-320 akx-327 akx-343 akx-052 akx-408 akx-070 akx-091">
+              Academics
+            </span>
+          </div>
+          <h3 class="akx-406 akx-151 akx-417 akx-271">Education</h3>
+          <p class="akx-413 akx-415 akx-234">
+            B.Sc. in Computer Science from The American College, Madurai (2022–2025), with hands-on dashboard projects built in Excel and SQL Server.
+          </p>
+        </div>
+
+        <!-- Card 3: Core Competencies -->
+        <div class="akx-174 akx-340 akx-308 akx-367 akx-336">
+          <div class="akx-143 akx-226 akx-230 akx-274">
+            <div class="akx-450 akx-189 akx-345 akx-040 akx-070 akx-086 akx-401 akx-143 akx-226 akx-231 akx-406">
+              <i class="fa-solid fa-layer-group"></i>
+            </div>
+            <span class="akx-154 akx-387 akx-435 akx-441 akx-320 akx-327 akx-343 akx-039 akx-400 akx-070 akx-085">
+              Strengths
+            </span>
+          </div>
+          <h3 class="akx-406 akx-151 akx-417 akx-271">Core Competencies</h3>
+          <p class="akx-413 akx-415 akx-234">
+            MIS reporting, management reporting, KPI monitoring, data validation, Power Query, Power Pivot, DAX, PivotTables and T-SQL querying.
+          </p>
+        </div>
+
+        <!-- Card 4: Analytical Mindset -->
+        <div class="akx-174 akx-340 akx-308 akx-367 akx-336">
+          <div class="akx-143 akx-226 akx-230 akx-274">
+            <div class="akx-450 akx-189 akx-345 akx-027 akx-070 akx-073 akx-391 akx-143 akx-226 akx-231 akx-406">
+              <i class="fa-solid fa-lightbulb"></i>
+            </div>
+            <span class="akx-154 akx-387 akx-435 akx-441 akx-320 akx-327 akx-343 akx-026 akx-390 akx-070 akx-072">
+              Approach
+            </span>
+          </div>
+          <h3 class="akx-406 akx-151 akx-417 akx-271">Analytical Mindset</h3>
+          <p class="akx-413 akx-415 akx-234">
+            Detail-focused on data validation and trend analysis, presenting findings through clear, slicer-driven dashboards that business teams can use directly.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 4. SKILLS & COMPETENCIES (3D WORD CLOUD + FILTER + 5 CARDS) ==================== -->
+  <section id="skills" class="akx-331 akx-334">
+    <div class="akx-260 akx-295 akx-323 akx-369 akx-251">
+      <!-- Centered Section Header -->
+      <div class="akx-395 akx-256 akx-295 akx-267 akx-336">
+        <span class="akx-154 akx-388 akx-441 akx-431 akx-397 akx-066 akx-270">Technical Arsenal</span>
+        <h2 class="akx-385 akx-372 akx-152 akx-417 akx-433">
+          Skills &amp; <span class="akx-402">Competencies</span>
+        </h2>
+        <div class="akx-346"></div>
+        <p class="akx-413 akx-418 akx-376 akx-294">
+          Interactive 3D skill sphere—drag or hover to explore my core data analytics technologies and methodologies.
+        </p>
+      </div>
+
+      <!-- Wide Dark Rounded 3D Interactive Word Cloud Stage -->
+      <div class="akx-336 akx-266 akx-341 akx-021 akx-070 akx-098 akx-356 akx-334 akx-303">
+        <div class="akx-011 akx-430 akx-338 akx-154 akx-387 akx-414 akx-143 akx-226 akx-165 akx-467">
+          <i class="akx-139 akx-105 akx-398"></i>
+          <span>Drag to rotate 3D cloud</span>
+        </div>
+        <div id="tag-cloud-container" class="akx-466 akx-204 akx-365 akx-334 akx-143 akx-226 akx-231">
+          <!-- Populated dynamically via JS 3D sphere engine -->
+        </div>
+      </div>
+
+      <!-- Filter Pills -->
+      <div class="akx-143 akx-146 akx-226 akx-231 akx-168 akx-266 akx-336">
+        <button data-filter="all" class="akx-361 akx-012 akx-324 akx-329 akx-343 akx-418 akx-155 akx-417 akx-101 akx-436">
+          All Skills
+        </button>
+        <button data-filter="bi" class="akx-361 akx-324 akx-329 akx-343 akx-418 akx-155 akx-413 akx-023 akx-070 akx-095 akx-221 akx-436">
+          Data &amp; BI Tools
+        </button>
+        <button data-filter="code" class="akx-361 akx-324 akx-329 akx-343 akx-418 akx-155 akx-413 akx-023 akx-070 akx-095 akx-221 akx-436">
+          SQL &amp; Databases
+        </button>
+      </div>
+
+      <!-- 5-Card Skill Grid (3 top, 2 bottom centered) -->
+      <div id="skills-grid" class="akx-175 akx-176 akx-279 akx-243 akx-171">
+        <!-- Skill Card 1: Microsoft Excel -->
+        <div data-category="bi" class="akx-360 akx-174 akx-340 akx-308 akx-336">
+          <div class="akx-143 akx-226 akx-230 akx-273">
+            <div class="akx-449 akx-188 akx-345 akx-040 akx-070 akx-086 akx-401 akx-143 akx-226 akx-231">
+              <i class="fa-solid fa-file-excel text-base"></i>
+            </div>
+            <span class="akx-154 akx-387 akx-401 akx-039 akx-320 akx-326 akx-343">Core</span>
+          </div>
+          <h3 class="akx-392 akx-151 akx-417 akx-265">Advanced Excel</h3>
+          <p class="akx-413 akx-418 akx-234 akx-273">
+            PivotTables, VLOOKUP, XLOOKUP, INDEX-MATCH, Slicers &amp; KPI Dashboards.
+          </p>
+          <div class="akx-143 akx-226 akx-164 akx-391 akx-388">
+            <i class="akx-139 akx-140"></i><i class="akx-139 akx-140"></i><i class="akx-139 akx-140"></i><i class="akx-139 akx-140"></i><i class="akx-139 akx-140"></i>
+          </div>
+        </div>
+
+        <!-- Skill Card 2: SQL & Databases -->
+        <div data-category="code" class="akx-360 akx-174 akx-340 akx-308 akx-336">
+          <div class="akx-143 akx-226 akx-230 akx-273">
+            <div class="akx-449 akx-188 akx-345 akx-035 akx-070 akx-080 akx-397 akx-143 akx-226 akx-231">
+              <i class="fa-solid fa-database text-base"></i>
+            </div>
+            <span class="akx-154 akx-387 akx-397 akx-034 akx-320 akx-326 akx-343">Core</span>
+          </div>
+          <h3 class="akx-392 akx-151 akx-417 akx-265">SQL Server &amp; T-SQL</h3>
+          <p class="akx-413 akx-418 akx-234 akx-273">
+            JOINs, GROUP BY &amp; HAVING, CASE WHEN, Subqueries, CTEs, Views &amp; Window Functions.
+          </p>
+          <div class="akx-143 akx-226 akx-164 akx-391 akx-388">
+            <i class="akx-139 akx-140"></i><i class="akx-139 akx-140"></i><i class="akx-139 akx-140"></i><i class="akx-139 akx-140"></i><i class="akx-139 akx-141"></i>
+          </div>
+        </div>
+
+        <!-- Skill Card 3: Power Query, Pivot & DAX -->
+        <div data-category="bi" class="akx-360 akx-174 akx-340 akx-308 akx-336">
+          <div class="akx-143 akx-226 akx-230 akx-273">
+            <div class="akx-449 akx-188 akx-345 akx-027 akx-070 akx-073 akx-391 akx-143 akx-226 akx-231">
+              <i class="fa-solid fa-chart-column text-base"></i>
+            </div>
+            <span class="akx-154 akx-387 akx-391 akx-026 akx-320 akx-326 akx-343">Core</span>
+          </div>
+          <h3 class="akx-392 akx-151 akx-417 akx-265">Power Query, Pivot &amp; DAX</h3>
+          <p class="akx-413 akx-418 akx-234 akx-273">
+            Data transformation, data modeling and DAX measures behind interactive Excel dashboards.
+          </p>
+          <div class="akx-143 akx-226 akx-164 akx-391 akx-388">
+            <i class="akx-139 akx-140"></i><i class="akx-139 akx-140"></i><i class="akx-139 akx-140"></i><i class="akx-139 akx-140"></i><i class="akx-139 akx-140"></i>
+          </div>
+        </div>
+
+        <!-- Skill Card 4: MIS & Reporting -->
+        <div data-category="bi" class="akx-360 akx-174 akx-340 akx-308 akx-336">
+          <div class="akx-143 akx-226 akx-230 akx-273">
+            <div class="akx-449 akx-188 akx-345 akx-031 akx-070 akx-076 akx-394 akx-143 akx-226 akx-231">
+              <i class="fa-solid fa-clipboard-list text-base"></i>
+            </div>
+            <span class="akx-154 akx-387 akx-394 akx-030 akx-320 akx-326 akx-343">Core</span>
+          </div>
+          <h3 class="akx-392 akx-151 akx-417 akx-265">MIS &amp; Reporting</h3>
+          <p class="akx-413 akx-418 akx-234 akx-273">
+            MIS Reporting, Management Reporting, KPI Monitoring &amp; Business Intelligence.
+          </p>
+          <div class="akx-143 akx-226 akx-164 akx-391 akx-388">
+            <i class="akx-139 akx-140"></i><i class="akx-139 akx-140"></i><i class="akx-139 akx-140"></i><i class="akx-139 akx-140"></i><i class="akx-139 akx-141"></i>
+          </div>
+        </div>
+
+        <!-- Skill Card 5: Data Visualization & Storytelling -->
+        <div data-category="bi" class="akx-360 akx-174 akx-340 akx-308 akx-336">
+          <div class="akx-143 akx-226 akx-230 akx-273">
+            <div class="akx-449 akx-188 akx-345 akx-053 akx-070 akx-092 akx-409 akx-143 akx-226 akx-231">
+              <i class="fa-solid fa-chart-line text-base"></i>
+            </div>
+            <span class="akx-154 akx-387 akx-409 akx-052 akx-320 akx-326 akx-343">Core</span>
+          </div>
+          <h3 class="akx-392 akx-151 akx-417 akx-265">Data Analysis</h3>
+          <p class="akx-413 akx-418 akx-234 akx-273">
+            Dashboard Development, Data Visualization, Data Validation &amp; Trend Analysis.
+          </p>
+          <div class="akx-143 akx-226 akx-164 akx-391 akx-388">
+            <i class="akx-139 akx-140"></i><i class="akx-139 akx-140"></i><i class="akx-139 akx-140"></i><i class="akx-139 akx-140"></i><i class="akx-139 akx-140"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 5. EXPERIENCE & EDUCATION TIMELINE ==================== -->
+  <section id="experience" class="akx-331 akx-334">
+    <div class="akx-259 akx-295 akx-323 akx-369 akx-251">
+      <!-- Centered Header -->
+      <div class="akx-395 akx-256 akx-295 akx-269 akx-336">
+        <span class="akx-154 akx-388 akx-441 akx-431 akx-397 akx-066 akx-270">Career &amp; Academic Path</span>
+        <h2 class="akx-385 akx-372 akx-152 akx-417 akx-433">
+          Experience &amp; <span class="akx-402">Education</span>
+        </h2>
+        <div class="akx-346"></div>
+      </div>
+
+      <!-- Vertical Timeline Container -->
+      <div class="akx-334">
+        <!-- Center Glowing Vertical Line -->
+        <div class="akx-011 akx-237 akx-282 akx-276 akx-427 akx-099 akx-462 akx-042 akx-161 akx-446 akx-425 akx-299"></div>
+
+        <!-- Timeline Item 1 (Right on Desktop) -->
+        <div class="akx-334 akx-143 akx-145 akx-278 akx-228 akx-281 akx-230 akx-267 akx-336">
+          <div class="akx-207 akx-277 akx-285"></div>
+          <!-- Center Node -->
+          <div class="akx-011 akx-237 akx-282 akx-009 akx-454 akx-195 akx-343 akx-017 akx-071 akx-078 akx-353 akx-467 akx-292 akx-284"></div>
+          <!-- Right Card -->
+          <div class="akx-288 akx-283 akx-285 akx-174 akx-340 akx-308">
+            <div class="akx-143 akx-226 akx-230 akx-167 akx-270">
+              <span class="akx-154 akx-387 akx-441 akx-434 akx-320 akx-327 akx-343 akx-034 akx-396 akx-070 akx-079">
+                Academic Projects
+              </span>
+              <span class="akx-418 akx-414 akx-154">MIS</span>
+            </div>
+            <h3 class="akx-392 akx-375 akx-151 akx-417">MIS Dashboard Developer</h3>
+            <p class="akx-418 akx-153 akx-397 akx-272">Excel &amp; SQL Server Dashboards</p>
+            <p class="akx-413 akx-418 akx-376 akx-234">
+              Built four analytics dashboards (Medicine Data Vault, Fiscal Matrix, Fraud Pulse Analytics and Stock Sphere Intelligence) using Power Query, Power Pivot, DAX, PivotTables, slicers and SQL queries.
+            </p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 2 (Left on Desktop) -->
+        <div class="akx-334 akx-143 akx-145 akx-278 akx-228 akx-281 akx-230 akx-267 akx-336">
+          <!-- Left Card -->
+          <div class="akx-288 akx-283 akx-285 akx-174 akx-340 akx-308">
+            <div class="akx-143 akx-226 akx-230 akx-167 akx-270">
+              <span class="akx-154 akx-387 akx-441 akx-434 akx-320 akx-327 akx-343 akx-052 akx-408 akx-070 akx-091">
+                2022 – 2025
+              </span>
+              <span class="akx-418 akx-414 akx-154">Degree</span>
+            </div>
+            <h3 class="akx-392 akx-375 akx-151 akx-417">Bachelor of Science in Computer Science</h3>
+            <p class="akx-418 akx-153 akx-409 akx-272">The American College, Madurai, India</p>
+            <p class="akx-413 akx-418 akx-376 akx-234">
+              Completed a B.Sc. in Computer Science (2022–2025) and built practical skills in MIS reporting, Advanced Excel and SQL Server through dashboard projects.
+            </p>
+          </div>
+          <!-- Center Node -->
+          <div class="akx-011 akx-237 akx-282 akx-009 akx-454 akx-195 akx-343 akx-017 akx-071 akx-090 akx-354 akx-467 akx-292 akx-284"></div>
+          <div class="akx-207 akx-277 akx-285"></div>
+        </div>
+
+        <!-- Timeline Item 3 (Right on Desktop) -->
+        <div class="akx-334 akx-143 akx-145 akx-278 akx-228 akx-281 akx-230 akx-336">
+          <div class="akx-207 akx-277 akx-285"></div>
+          <!-- Center Node -->
+          <div class="akx-011 akx-237 akx-282 akx-009 akx-454 akx-195 akx-343 akx-017 akx-071 akx-084 akx-352 akx-467 akx-292 akx-284"></div>
+          <!-- Right Card -->
+          <div class="akx-288 akx-283 akx-285 akx-174 akx-340 akx-308">
+            <div class="akx-143 akx-226 akx-230 akx-167 akx-270">
+              <span class="akx-154 akx-387 akx-441 akx-434 akx-320 akx-327 akx-343 akx-039 akx-400 akx-070 akx-085">
+                Certification
+              </span>
+              <span class="akx-418 akx-414 akx-154">Upskilling</span>
+            </div>
+            <h3 class="akx-392 akx-375 akx-151 akx-417">Excel Power Query, Power Pivot &amp; DAX</h3>
+            <p class="akx-418 akx-153 akx-401 akx-272">Udemy</p>
+            <p class="akx-413 akx-418 akx-376 akx-234">
+              Course covering data transformation, data modeling and DAX, the same tools used in my Excel dashboards.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 6. HIGHLIGHTED PROJECTS (3 + 1 GRID WITH CUSTOM BI DASHBOARD PREVIEWS) ==================== -->
+  <!-- <section id="projects" class="akx-331 akx-334">
+    <div class="akx-260 akx-295 akx-323 akx-369 akx-251">
+      Centered Header
+      <div class="akx-395 akx-256 akx-295 akx-268 akx-336">
+        <span class="akx-154 akx-388 akx-441 akx-431 akx-397 akx-066 akx-270">Portfolio Showcase</span>
+        <h2 class="akx-385 akx-372 akx-152 akx-417 akx-433">
+          Highlighted <span class="akx-402">Projects</span>
+        </h2>
+        <div class="akx-346"></div>
+        <p class="akx-413 akx-418 akx-376 akx-294">
+          Four MIS dashboards built with Advanced Excel and SQL Server, covering sales, finance, risk and inventory.
+        </p>
+      </div>
+
+      3-Column + 1-Card Grid
+      <div class="akx-175 akx-176 akx-279 akx-243 akx-172">
+        Project 1: Executive Sales & Revenue Analytics
+        <article class="akx-174 akx-340 akx-303 akx-143 akx-145 akx-336 akx-180">
+          Bespoke Mini Dashboard Preview Graphic
+          <div class="akx-196 akx-043 akx-157 akx-442 akx-422 akx-307 akx-075 akx-097 akx-334 akx-303">
+            <div class="akx-143 akx-226 akx-230 akx-271">
+              <span class="akx-154 akx-387 akx-151 akx-396 akx-434 akx-441">MEDICINE MIS DASHBOARD</span>
+              <span class="akx-387 akx-319 akx-326 akx-339 akx-036 akx-396 akx-154">Excel · DAX</span>
+            </div>
+            Mini KPI Row
+            <div class="akx-175 akx-178 akx-167 akx-272">
+              <div class="akx-064 akx-344 akx-306 akx-070 akx-096">
+                <div class="akx-389 akx-413">Sales</div>
+                <div class="akx-418 akx-151 akx-417">Tracked</div>
+              </div>
+              <div class="akx-064 akx-344 akx-306 akx-070 akx-096">
+                <div class="akx-389 akx-413">Purchases</div>
+                <div class="akx-418 akx-151 akx-401">Tracked</div>
+              </div>
+              <div class="akx-064 akx-344 akx-306 akx-070 akx-096">
+                <div class="akx-389 akx-413">GST &amp; Profit</div>
+                <div class="akx-418 akx-151 akx-397">Tracked</div>
+              </div>
+            </div>
+            Mini SVG Bar + Trend Chart
+            <svg viewBox="0 0 260 55" class="akx-466 akx-190 akx-304">
+              <rect x="8" y="28" width="16" height="24" rx="3" fill="#1e3a5f" />
+              <rect x="34" y="20" width="16" height="32" rx="3" fill="#0284c7" />
+              <rect x="60" y="24" width="16" height="28" rx="3" fill="#0ea5e9" />
+              <rect x="86" y="12" width="16" height="40" rx="3" fill="#22d3ee" />
+              <rect x="112" y="16" width="16" height="36" rx="3" fill="#38bdf8" />
+              <rect x="138" y="6" width="16" height="46" rx="3" fill="#818cf8" />
+              <path d="M180 42 L200 30 L220 34 L245 10" stroke="#22d3ee" stroke-width="2.5" fill="none" stroke-linecap="round" />
+              <circle cx="245" cy="10" r="3.5" fill="#22d3ee" />
+            </svg>
+          </div>
+          <div class="akx-308 akx-144 akx-143 akx-145 akx-230">
+            <div>
+              <div class="akx-143 akx-146 akx-165 akx-272">
+                <span class="akx-154 akx-387 akx-319 akx-326 akx-339 akx-034 akx-396">Power Query</span>
+                <span class="akx-154 akx-387 akx-319 akx-326 akx-339 akx-030 akx-393">DAX</span>
+                <span class="akx-154 akx-387 akx-319 akx-326 akx-339 akx-059 akx-412">Power Pivot</span>
+              </div>
+              <h3 class="akx-392 akx-151 akx-417 akx-270 akx-182 akx-437">Medicine Data Vault – MIS Dashboard</h3>
+              <p class="akx-413 akx-418 akx-234 akx-274">
+                Excel MIS dashboard for sales, purchases, GST and profit, built with Power Query, Power Pivot and DAX, with slicers for financial-year and staff-wise analysis.
+              </p>
+            </div>
+            <button onclick="openProjectModal(0)" class="akx-222 akx-226 akx-167 akx-418 akx-155 akx-397 akx-216 akx-437">
+              <span>View Case Study</span>
+              <i class="akx-139 akx-103 akx-387 akx-186 akx-438"></i>
+            </button>
+          </div>
+        </article> -->
+
+        <!-- Project 2: Excel Financial & Expense Tracker -->
+        <!-- <article class="akx-174 akx-340 akx-303 akx-143 akx-145 akx-336 akx-180">
+          <div class="akx-196 akx-043 akx-156 akx-443 akx-421 akx-307 akx-075 akx-097 akx-334 akx-303">
+            <div class="akx-143 akx-226 akx-230 akx-271">
+              <span class="akx-154 akx-387 akx-151 akx-400 akx-434 akx-441">FISCAL MATRIX MIS</span>
+              <span class="akx-387 akx-319 akx-326 akx-339 akx-041 akx-400 akx-154">P&amp;L Tracker</span>
+            </div>
+            <div class="akx-175 akx-177 akx-167 akx-272">
+              <div class="akx-064 akx-344 akx-306 akx-070 akx-096">
+                <div class="akx-389 akx-413">Revenue &amp; Expenses</div>
+                <div class="akx-418 akx-151 akx-401">Tracked</div>
+              </div>
+              <div class="akx-064 akx-344 akx-306 akx-070 akx-096">
+                <div class="akx-389 akx-413">Profit &amp; Loss</div>
+                <div class="akx-418 akx-151 akx-417">Tracked</div>
+              </div>
+            </div>
+            <svg viewBox="0 0 260 55" class="akx-466 akx-190">
+              <path d="M10 45 Q60 15, 110 28 T210 12 L250 8 L250 52 L10 52 Z" fill="rgba(16,185,129,0.18)" />
+              <path d="M10 45 Q60 15, 110 28 T210 12 L250 8" stroke="#10b981" stroke-width="2.5" fill="none" />
+            </svg>
+          </div>
+          <div class="akx-308 akx-144 akx-143 akx-145 akx-230">
+            <div>
+              <div class="akx-143 akx-146 akx-165 akx-272">
+                <span class="akx-154 akx-387 akx-319 akx-326 akx-339 akx-039 akx-400">Excel</span>
+                <span class="akx-154 akx-387 akx-319 akx-326 akx-339 akx-060 akx-416">Slicers</span>
+                <span class="akx-154 akx-387 akx-319 akx-326 akx-339 akx-059 akx-412">PivotTables</span>
+              </div>
+              <h3 class="akx-392 akx-151 akx-417 akx-270 akx-183 akx-437">Fiscal Matrix – Financial MIS Dashboard</h3>
+              <p class="akx-413 akx-418 akx-234 akx-274">
+                Excel dashboard tracking revenue, expenses and profit and loss, with department-wise and category-wise analysis through slicers and PivotTables.
+              </p>
+            </div>
+            <button onclick="openProjectModal(1)" class="akx-222 akx-226 akx-167 akx-418 akx-155 akx-401 akx-218 akx-437">
+              <span>View Case Study</span>
+              <i class="akx-139 akx-103 akx-387 akx-186 akx-438"></i>
+            </button>
+          </div>
+        </article> -->
+
+        <!-- Project 3: Fraud Pulse Analytics -->
+        <!-- <article class="akx-174 akx-340 akx-303 akx-143 akx-145 akx-336 akx-180">
+          <div class="akx-196 akx-043 akx-159 akx-445 akx-420 akx-307 akx-075 akx-097 akx-334 akx-303">
+            <div class="akx-143 akx-226 akx-230 akx-271">
+              <span class="akx-154 akx-387 akx-151 akx-408 akx-434 akx-441">FRAUD PULSE ANALYTICS</span>
+              <span class="akx-387 akx-319 akx-326 akx-339 akx-054 akx-408 akx-154">Risk Analysis</span>
+            </div>
+            <div class="akx-175 akx-178 akx-167 akx-272">
+              <div class="akx-064 akx-344 akx-306 akx-070 akx-096">
+                <div class="akx-389 akx-413">Credit Score</div>
+                <div class="akx-418 akx-151 akx-410">Reviewed</div>
+              </div>
+              <div class="akx-064 akx-344 akx-306 akx-070 akx-096">
+                <div class="akx-389 akx-413">Debt-to-Income</div>
+                <div class="akx-418 akx-151 akx-408">Tracked</div>
+              </div>
+              <div class="akx-064 akx-344 akx-306 akx-070 akx-096">
+                <div class="akx-389 akx-413">Fraud Flags</div>
+                <div class="akx-418 akx-151 akx-417">Flagged</div>
+              </div>
+            </div>
+            <div class="akx-175 akx-179 akx-165 akx-315">
+              <div class="akx-199 akx-339 akx-057"></div>
+              <div class="akx-199 akx-339 akx-056"></div>
+              <div class="akx-199 akx-339 akx-049"></div>
+              <div class="akx-199 akx-339 akx-037"></div>
+              <div class="akx-199 akx-339 akx-055"></div>
+              <div class="akx-199 akx-339 akx-038"></div>
+            </div>
+          </div>
+          <div class="akx-308 akx-144 akx-143 akx-145 akx-230">
+            <div>
+              <div class="akx-143 akx-146 akx-165 akx-272">
+                <span class="akx-154 akx-387 akx-319 akx-326 akx-339 akx-052 akx-408">Excel</span>
+                <span class="akx-154 akx-387 akx-319 akx-326 akx-339 akx-047 akx-403">Slicers</span>
+                <span class="akx-154 akx-387 akx-319 akx-326 akx-339 akx-034 akx-396">PivotTables</span>
+              </div>
+              <h3 class="akx-392 akx-151 akx-417 akx-270 akx-184 akx-437">Fraud Pulse Analytics – Risk Dashboard</h3>
+              <p class="akx-413 akx-418 akx-234 akx-274">
+                Excel risk dashboard on credit scores, debt-to-income ratios and fraud flags, with slicers to filter and review high-risk accounts.
+              </p>
+            </div>
+            <button onclick="openProjectModal(2)" class="akx-222 akx-226 akx-167 akx-418 akx-155 akx-409 akx-219 akx-437">
+              <span>View Case Study</span>
+              <i class="akx-139 akx-103 akx-387 akx-186 akx-438"></i>
+            </button>
+          </div>
+        </article> -->
+
+        <!-- Project 4: Stock Sphere Intelligence -->
+        <!-- <article class="akx-174 akx-340 akx-303 akx-143 akx-145 akx-336 akx-180">
+          <div class="akx-196 akx-043 akx-158 akx-444 akx-419 akx-307 akx-075 akx-097 akx-334 akx-303">
+            <div class="akx-143 akx-226 akx-230 akx-271">
+              <span class="akx-154 akx-387 akx-151 akx-390 akx-434 akx-441">STOCK SPHERE INVENTORY</span>
+              <span class="akx-387 akx-319 akx-326 akx-339 akx-028 akx-390 akx-154">Excel + SQL</span>
+            </div>
+            <div class="akx-175 akx-177 akx-167 akx-272">
+              <div class="akx-064 akx-344 akx-306 akx-070 akx-096">
+                <div class="akx-389 akx-413">Stock In &amp; Out</div>
+                <div class="akx-418 akx-151 akx-417">Tracked</div>
+              </div>
+              <div class="akx-064 akx-344 akx-306 akx-070 akx-096">
+                <div class="akx-389 akx-413">Reorder Items</div>
+                <div class="akx-418 akx-151 akx-391">Flagged</div>
+              </div>
+            </div>
+            <div class="akx-381 akx-315">
+              <div class="akx-466 akx-192 akx-343 akx-062 akx-303">
+                <div class="akx-465 akx-206 akx-044 akx-160 akx-424 akx-343"></div>
+              </div>
+              <div class="akx-466 akx-192 akx-343 akx-062 akx-303">
+                <div class="akx-464 akx-206 akx-044 akx-163 akx-423 akx-343"></div>
+              </div>
+            </div>
+          </div>
+          <div class="akx-308 akx-144 akx-143 akx-145 akx-230">
+            <div>
+              <div class="akx-143 akx-146 akx-165 akx-272">
+                <span class="akx-154 akx-387 akx-319 akx-326 akx-339 akx-026 akx-390">Excel</span>
+                <span class="akx-154 akx-387 akx-319 akx-326 akx-339 akx-034 akx-396">SQL</span>
+              </div>
+              <h3 class="akx-392 akx-151 akx-417 akx-270 akx-181 akx-437">Stock Sphere Intelligence – Inventory Dashboard</h3>
+              <p class="akx-413 akx-418 akx-234 akx-274">
+                Inventory dashboard tracking stock in, stock out and reorder items, with SQL queries for stock analysis and slicers by year, month, product and category.
+              </p>
+            </div>
+            <button onclick="openProjectModal(3)" class="akx-222 akx-226 akx-167 akx-418 akx-155 akx-391 akx-215 akx-437">
+              <span>View Case Study</span>
+              <i class="akx-139 akx-103 akx-387 akx-186 akx-438"></i>
+            </button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- ==================== 7. SERVICES OFFERED (3 TOP + 2 BOTTOM CENTERED GRID) ==================== -->
+  <section id="services" class="akx-331 akx-334">
+    <div class="akx-260 akx-295 akx-323 akx-369 akx-251">
+      <!-- Centered Header -->
+      <div class="akx-395 akx-256 akx-295 akx-268 akx-336">
+        <span class="akx-154 akx-388 akx-441 akx-431 akx-397 akx-066 akx-270">How I Add Value</span>
+        <h2 class="akx-385 akx-372 akx-152 akx-417 akx-433">
+          Services <span class="akx-402">Offered</span>
+        </h2>
+        <div class="akx-346"></div>
+      </div>
+
+      <!-- Top 3 Cards -->
+      <div class="akx-175 akx-176 akx-280 akx-172 akx-275">
+        <!-- Service 1 -->
+        <div class="akx-174 akx-340 akx-308 akx-336">
+          <div class="akx-450 akx-189 akx-345 akx-032 akx-070 akx-077 akx-394 akx-143 akx-226 akx-231 akx-406 akx-274">
+            <i class="fa-solid fa-broom"></i>
+          </div>
+          <h3 class="akx-392 akx-151 akx-417 akx-270">Data Validation &amp; Preparation</h3>
+          <p class="akx-413 akx-418 akx-376 akx-234">
+            Checking and cleaning business data so every report is accurate, consistent and ready for analysis.
+          </p>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="akx-174 akx-340 akx-308 akx-336">
+          <div class="akx-450 akx-189 akx-345 akx-050 akx-070 akx-089 akx-407 akx-143 akx-226 akx-231 akx-406 akx-274">
+            <i class="fa-solid fa-gauge-high"></i>
+          </div>
+          <h3 class="akx-392 akx-151 akx-417 akx-270">MIS Dashboards</h3>
+          <p class="akx-413 akx-418 akx-376 akx-234">
+            Building Excel dashboards with Power Query, Power Pivot, DAX and slicers for clear management views.
+          </p>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="akx-174 akx-340 akx-308 akx-336">
+          <div class="akx-450 akx-189 akx-345 akx-041 akx-070 akx-087 akx-401 akx-143 akx-226 akx-231 akx-406 akx-274">
+            <i class="fa-solid fa-magnifying-glass-chart"></i>
+          </div>
+          <h3 class="akx-392 akx-151 akx-417 akx-270">KPI Monitoring &amp; Trend Analysis</h3>
+          <p class="akx-413 akx-418 akx-376 akx-234">
+            Tracking KPIs and analyzing trends across sales, finance, risk and inventory data to support decisions.
+          </p>
+        </div>
+      </div>
+
+      <!-- Bottom 2 Centered Cards -->
+      <div class="akx-175 akx-176 akx-279 akx-172 akx-258 akx-295">
+        <!-- Service 4 -->
+        <div class="akx-174 akx-340 akx-308 akx-336">
+          <div class="akx-450 akx-189 akx-345 akx-028 akx-070 akx-074 akx-391 akx-143 akx-226 akx-231 akx-406 akx-274">
+            <i class="fa-solid fa-server"></i>
+          </div>
+          <h3 class="akx-392 akx-151 akx-417 akx-270">SQL Querying &amp; Reporting</h3>
+          <p class="akx-413 akx-418 akx-376 akx-234">
+            Writing T-SQL with JOINs, CTEs, Views and window functions to pull accurate business metrics from SQL Server.
+          </p>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="akx-174 akx-340 akx-308 akx-336">
+          <div class="akx-450 akx-189 akx-345 akx-048 akx-070 akx-088 akx-404 akx-143 akx-226 akx-231 akx-406 akx-274">
+            <i class="fa-solid fa-file-invoice"></i>
+          </div>
+          <h3 class="akx-392 akx-151 akx-417 akx-270">Advanced Excel Reporting</h3>
+          <p class="akx-413 akx-418 akx-376 akx-234">
+            Reducing manual work with Power Query, PivotTables and lookup formulas such as XLOOKUP and INDEX-MATCH.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 8. PROFESSIONAL SUMMARY ==================== -->
+  <section id="summary" class="akx-331 akx-334">
+    <div class="akx-260 akx-295 akx-323 akx-369 akx-251">
+      <!-- Centered Header -->
+      <div class="akx-395 akx-257 akx-295 akx-267 akx-336">
+        <span class="akx-154 akx-388 akx-441 akx-431 akx-397 akx-066 akx-270">Executive Overview</span>
+        <h2 class="akx-385 akx-372 akx-152 akx-417 akx-433">
+          Professional <span class="akx-402">Summary</span>
+        </h2>
+        <div class="akx-346"></div>
+        <p class="akx-413 akx-418 akx-376 akx-294 akx-234">
+          B.Sc. Computer Science graduate skilled in MIS reporting, business reporting, KPI monitoring, data validation and dashboard development using Advanced Excel and SQL Server (T-SQL). Developed four analytics dashboards.
+        </p>
+      </div>
+
+      <!-- Top 2-Column Highlight Cards -->
+      <div class="akx-175 akx-176 akx-279 akx-172 akx-275">
+        <div class="akx-174 akx-340 akx-308 akx-143 akx-228 akx-170 akx-336">
+          <div class="akx-450 akx-189 akx-359 akx-345 akx-035 akx-070 akx-080 akx-397 akx-143 akx-226 akx-231 akx-406">
+            <i class="fa-solid fa-microchip"></i>
+          </div>
+          <div>
+            <h3 class="akx-392 akx-151 akx-417 akx-264">Technical Precision &amp; Data Hygiene</h3>
+            <p class="akx-413 akx-418 akx-376 akx-234">
+              Data validation applied across KPI definitions, DAX measures and Power Query data transformations.
+            </p>
+          </div>
+        </div>
+
+        <div class="akx-174 akx-340 akx-308 akx-143 akx-228 akx-170 akx-336">
+          <div class="akx-450 akx-189 akx-359 akx-345 akx-053 akx-070 akx-092 akx-409 akx-143 akx-226 akx-231 akx-406">
+            <i class="fa-solid fa-rocket"></i>
+          </div>
+          <div>
+            <h3 class="akx-392 akx-151 akx-417 akx-264">Actionable Business Impact</h3>
+            <p class="akx-413 akx-418 akx-376 akx-234">
+              Focused on turning reports and dashboards into clear insights on sales, costs, risk and stock levels.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom 3-Column Cards -->
+      <div class="akx-175 akx-176 akx-280 akx-172">
+        <!-- Card 1: Core Stack -->
+        <div class="akx-174 akx-340 akx-308 akx-336">
+          <div class="akx-143 akx-226 akx-168 akx-272">
+            <span class="akx-458 akx-201 akx-344 akx-040 akx-401 akx-143 akx-226 akx-231 akx-415">
+              <i class="fa-solid fa-code"></i>
+            </span>
+            <h4 class="akx-415 akx-151 akx-417">Core Technical Stack</h4>
+          </div>
+          <ul class="akx-381 akx-418 akx-413">
+            <li class="akx-143 akx-226 akx-167"><i class="akx-139 akx-115 akx-401 akx-387"></i> Power Query, Power Pivot &amp; DAX</li>
+            <li class="akx-143 akx-226 akx-167"><i class="akx-139 akx-115 akx-401 akx-387"></i> SQL Server &amp; T-SQL</li>
+            <li class="akx-143 akx-226 akx-167"><i class="akx-139 akx-115 akx-401 akx-387"></i> PivotTables, XLOOKUP &amp; INDEX-MATCH</li>
+            <li class="akx-143 akx-226 akx-167"><i class="akx-139 akx-115 akx-401 akx-387"></i> Word, Excel, PowerPoint, Outlook, Teams</li>
+          </ul>
+        </div>
+
+        <!-- Card 2: Analytical Domains -->
+        <div class="akx-174 akx-340 akx-308 akx-336">
+          <div class="akx-143 akx-226 akx-168 akx-272">
+            <span class="akx-458 akx-201 akx-344 akx-053 akx-409 akx-143 akx-226 akx-231 akx-415">
+              <i class="fa-solid fa-briefcase"></i>
+            </span>
+            <h4 class="akx-415 akx-151 akx-417">Project Domains</h4>
+          </div>
+          <ul class="akx-381 akx-418 akx-413">
+            <li class="akx-143 akx-226 akx-167"><i class="akx-139 akx-115 akx-409 akx-387"></i> Sales, Purchases &amp; GST</li>
+            <li class="akx-143 akx-226 akx-167"><i class="akx-139 akx-115 akx-409 akx-387"></i> Revenue, Expenses &amp; P&amp;L</li>
+            <li class="akx-143 akx-226 akx-167"><i class="akx-139 akx-115 akx-409 akx-387"></i> Credit &amp; Fraud Risk</li>
+            <li class="akx-143 akx-226 akx-167"><i class="akx-139 akx-115 akx-409 akx-387"></i> Inventory &amp; Stock Control</li>
+          </ul>
+        </div>
+
+        <!-- Card 3: Resume Download CTA Card -->
+        <div class="akx-174 akx-340 akx-308 akx-143 akx-145 akx-230 akx-336">
+          <div>
+            <div class="akx-143 akx-226 akx-168 akx-272">
+              <span class="akx-458 akx-201 akx-344 akx-035 akx-397 akx-143 akx-226 akx-231 akx-415">
+                <i class="fa-solid fa-file-lines"></i>
+              </span>
+              <h4 class="akx-415 akx-151 akx-417">Resume &amp; Availability</h4>
+            </div>
+            <p class="akx-418 akx-413 akx-234 akx-273">
+              Seeking entry-level MIS Executive, Reporting Analyst and Data Analyst roles in Dubai. Download my CV for full project details.
+            </p>
+          </div>
+          <a href="https://thewebsitedemo.in/akhash-new/wp-content/themes/hello-elementor-child/Akhash_AM_Resume.pdf" target="_blank"><button onclick="triggerResumeToast()" class="akx-101 akx-466 akx-330 akx-323 akx-345 akx-418 akx-155 akx-417 akx-143 akx-226 akx-231 akx-167">
+            <i class="akx-139 akx-122"></i>
+            <span>Download Full CV (PDF)</span>
+          </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 9. PROFESSIONAL CERTIFICATIONS ==================== -->
+  <section id="certifications" class="akx-331 akx-334">
+    <div class="akx-260 akx-295 akx-323 akx-369 akx-251">
+      <!-- Centered Header -->
+      <div class="akx-395 akx-256 akx-295 akx-268 akx-336">
+        <span class="akx-154 akx-388 akx-441 akx-431 akx-397 akx-066 akx-270">Verified Credentials</span>
+        <h2 class="akx-385 akx-372 akx-152 akx-417 akx-433">
+          Professional <span class="akx-402">Certifications</span>
+        </h2>
+        <div class="akx-346"></div>
+      </div>
+
+      <!-- Certifications Grid -->
+      <div class="akx-175 akx-176 akx-279 akx-172 akx-258 akx-295">
+        <!-- Cert 1 -->
+        <div class="akx-174 akx-340 akx-308 akx-143 akx-145 akx-230 akx-336">
+          <div>
+            <div class="akx-143 akx-226 akx-230 akx-273">
+              <div class="akx-449 akx-188 akx-345 akx-035 akx-070 akx-080 akx-397 akx-143 akx-226 akx-231">
+                <i class="fa-solid fa-award text-lg"></i>
+              </div>
+              <span class="akx-154 akx-387 akx-413">Udemy</span>
+            </div>
+            <h3 class="akx-392 akx-151 akx-417 akx-265">Excel Power Query, Power Pivot &amp; DAX</h3>
+            <p class="akx-418 akx-397 akx-153 akx-272">Udemy Certification</p>
+            <p class="akx-413 akx-418 akx-234 akx-274">
+              Training in data transformation with Power Query, data modeling with Power Pivot and DAX measures for Excel dashboards.
+            </p>
+          </div>
+          <button onclick="triggerCertToast('Excel Power Query, Power Pivot & DAX – Udemy')" class="akx-222 akx-226 akx-165 akx-418 akx-155 akx-397 akx-216 akx-437">
+            <span>View Credential</span>
+            <i class="akx-139 akx-104 akx-387"></i>
+          </button>
+        </div>
+
+        <!-- Cert 2 (Degree) -->
+        <div class="akx-174 akx-340 akx-308 akx-143 akx-145 akx-230 akx-336">
+          <div>
+            <div class="akx-143 akx-226 akx-230 akx-273">
+              <div class="akx-449 akx-188 akx-345 akx-053 akx-070 akx-092 akx-409 akx-143 akx-226 akx-231">
+                <i class="fa-solid fa-graduation-cap text-lg"></i>
+              </div>
+              <span class="akx-154 akx-387 akx-413">2022 – 2025</span>
+            </div>
+            <h3 class="akx-392 akx-151 akx-417 akx-265">B.Sc. in Computer Science</h3>
+            <p class="akx-418 akx-409 akx-153 akx-272">The American College, Madurai, India</p>
+            <p class="akx-413 akx-418 akx-234 akx-274">
+              Bachelor of Science in Computer Science, with project work in MIS dashboards, Advanced Excel and SQL Server.
+            </p>
+          </div>
+          <button onclick="triggerCertToast('B.Sc. Computer Science – The American College, Madurai')" class="akx-222 akx-226 akx-165 akx-418 akx-155 akx-409 akx-219 akx-437">
+            <span>View Details</span>
+            <i class="akx-139 akx-104 akx-387"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Subtle Horizontal Accent Progress Bar Below Certs (Matching Screenshot) -->
+      <div class="akx-293 akx-187 akx-466 akx-343 akx-064 akx-303">
+        <div class="akx-206 akx-466 akx-044 akx-161 akx-446 akx-425 akx-343 akx-300"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 10. GET IN TOUCH SECTION ==================== -->
+  <section id="contact" class="akx-331 akx-334">
+    <div class="akx-260 akx-295 akx-323 akx-369 akx-251">
+      <!-- Centered Header -->
+      <div class="akx-395 akx-256 akx-295 akx-268 akx-336">
+        <span class="akx-154 akx-388 akx-441 akx-431 akx-397 akx-066 akx-270">Let's Collaborate</span>
+        <h2 class="akx-385 akx-372 akx-152 akx-417 akx-433">
+          Get In <span class="akx-402">Touch</span>
+        </h2>
+        <div class="akx-346"></div>
+        <p class="akx-413 akx-418 akx-376 akx-294">
+          Looking for an MIS Executive, Reporting Analyst or Data Analyst in Dubai? Send a message below.
+        </p>
+      </div>
+
+      <!-- 2-Column Contact Grid -->
+      <div class="akx-175 akx-176 akx-242 akx-173 akx-229">
+        <!-- Left Column: Contact Info + Dark Stylized City Map -->
+        <div class="akx-238 akx-143 akx-145 akx-172 akx-336">
+          <!-- Contact Details Glass Card -->
+          <div class="akx-174 akx-340 akx-308 akx-382">
+            <h3 class="akx-392 akx-151 akx-417">Contact Information</h3>
+
+            <div class="akx-143 akx-226 akx-169">
+              <div class="akx-449 akx-188 akx-345 akx-035 akx-070 akx-080 akx-397 akx-143 akx-226 akx-231 akx-359">
+                <i class="fa-solid fa-envelope text-sm"></i>
+              </div>
+              <div class="akx-287">
+                <div class="akx-388 akx-154 akx-413">Email Address</div>
+                <a href="mailto:akhash3005@gmail.com" class="akx-418 akx-376 akx-155 akx-417 akx-217 akx-437 akx-439 akx-066">
+                  akhash3005@gmail.com
+                </a>
+              </div>
+            </div>
+
+            <div class="akx-143 akx-226 akx-169">
+              <div class="akx-449 akx-188 akx-345 akx-053 akx-070 akx-092 akx-409 akx-143 akx-226 akx-231 akx-359">
+                <i class="fa-solid fa-location-dot text-sm"></i>
+              </div>
+              <div>
+                <div class="akx-388 akx-154 akx-413">Location</div>
+                <div class="akx-418 akx-376 akx-155 akx-417">Dubai, UAE</div>
+              </div>
+            </div>
+
+            <div class="akx-143 akx-226 akx-169">
+              <div class="akx-449 akx-188 akx-345 akx-040 akx-070 akx-086 akx-401 akx-143 akx-226 akx-231 akx-359">
+                <i class="fa-solid fa-briefcase text-sm"></i>
+              </div>
+              <div>
+                <div class="akx-388 akx-154 akx-413">Availability</div>
+                <div class="akx-418 akx-376 akx-155 akx-401">Open to Entry-Level Roles in Dubai</div>
+              </div>
+            </div>
+
+            <div class="akx-143 akx-226 akx-169">
+              <div class="akx-449 akx-188 akx-345 akx-027 akx-070 akx-073 akx-391 akx-143 akx-226 akx-231 akx-359">
+                <i class="fa-solid fa-phone text-sm"></i>
+              </div>
+              <div>
+                <div class="akx-388 akx-154 akx-413">Phone</div>
+                <a href="tel:+971582872441" class="akx-418 akx-376 akx-155 akx-417 akx-217 akx-437">+971 58 287 2441</a>
+              </div>
+            </div>
+
+            <div class="akx-316 akx-094 akx-097 akx-143 akx-226 akx-168">
+              <a href="https://linkedin.com/in/akhash-akhash-a32b7844b" target="_blank" rel="noreferrer" class="akx-459 akx-202 akx-344 akx-064 akx-209 akx-070 akx-095 akx-412 akx-217 akx-143 akx-226 akx-231 akx-436">
+                <i class="fa-brands fa-linkedin-in text-xs"></i>
+              </a>
+              <a href="https://github.com/akhash5" target="_blank" rel="noreferrer" class="akx-459 akx-202 akx-344 akx-064 akx-210 akx-070 akx-095 akx-412 akx-220 akx-143 akx-226 akx-231 akx-436">
+                <i class="fa-brands fa-github text-xs"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Dark Stylized Vector Map Card (Zero external iframe/API failures) -->
+          <div class="akx-174 akx-340 akx-303 akx-144 akx-286 akx-334 akx-070 akx-098">
+            <svg viewBox="0 0 400 200" class="akx-466 akx-206 akx-297" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dubai Location Map">
+              <rect width="400" height="200" fill="#09111e" />
+              <!-- Bay of Bengal Coastline -->
+              <path d="M295 0 L400 0 L400 200 L265 200 Q282 110 295 0 Z" fill="#07192c" />
+              <!-- City Grid & Arterial Roads -->
+              <g stroke="#16263d" stroke-width="1.5" fill="none">
+                <path d="M0 40 L290 48" />
+                <path d="M0 85 L285 95" />
+                <path d="M0 135 L278 142" />
+                <path d="M0 175 L270 180" />
+                <path d="M55 0 L45 200" />
+                <path d="M120 0 L112 200" />
+                <path d="M185 0 L175 200" />
+                <path d="M245 0 L232 200" />
+              </g>
+              <!-- Highlighted Highway -->
+              <path d="M30 195 Q135 120 278 35" stroke="#1e3a5f" stroke-width="3.5" fill="none" />
+              <!-- Green Park Patches -->
+              <rect x="135" y="102" width="28" height="20" rx="4" fill="rgba(16,185,129,0.16)" />
+              <rect x="70" y="55" width="24" height="18" rx="4" fill="rgba(16,185,129,0.14)" />
+              <!-- Glowing Location Pin -->
+              <circle cx="185" cy="98" r="24" fill="rgba(34,211,238,0.14)" />
+              <circle cx="185" cy="98" r="10" fill="rgba(34,211,238,0.3)" />
+              <circle cx="185" cy="98" r="5" fill="#22d3ee" />
+              <!-- Label Pill -->
+              <rect x="136" y="64" width="98" height="20" rx="6" fill="#0d1525" stroke="rgba(34,211,238,0.45)" stroke-width="1" />
+              <text x="185" y="77" text-anchor="middle" fill="#e2e8f0" font-family="JetBrains Mono, monospace" font-size="9" font-weight="600">Dubai, UAE</text>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Right Column: Contact Form Glass Card -->
+        <div class="akx-239 akx-336">
+          <form id="contact-form" class="akx-174 akx-340 akx-308 akx-368 akx-206 akx-143 akx-145 akx-230 akx-382">
+            <div>
+              <h3 class="akx-392 akx-151 akx-417 akx-274">Send a Message</h3>
+              <div class="akx-175 akx-176 akx-362 akx-170 akx-273">
+                <div>
+                  <label for="sender-name" class="akx-066 akx-418 akx-153 akx-413 akx-265">Your Name</label>
+                  <input id="sender-name" type="text" required placeholder="John Doe" class="akx-466 akx-323 akx-332 akx-345 akx-019 akx-070 akx-095 akx-149 akx-150 akx-418 akx-376 akx-417 akx-313 akx-437" />
+                </div>
+                <div>
+                  <label for="sender-email" class="akx-066 akx-418 akx-153 akx-413 akx-265">Your Email</label>
+                  <input id="sender-email" type="email" required placeholder="john@company.com" class="akx-466 akx-323 akx-332 akx-345 akx-019 akx-070 akx-095 akx-149 akx-150 akx-418 akx-376 akx-417 akx-313 akx-437" />
+                </div>
+              </div>
+
+              <div class="akx-273">
+                <label for="sender-subject" class="akx-066 akx-418 akx-153 akx-413 akx-265">Subject</label>
+                <input id="sender-subject" type="text" required placeholder="MIS / Reporting Analyst Opportunity" class="akx-466 akx-323 akx-332 akx-345 akx-019 akx-070 akx-095 akx-149 akx-150 akx-418 akx-376 akx-417 akx-313 akx-437" />
+              </div>
+
+              <div>
+                <label for="sender-message" class="akx-066 akx-418 akx-153 akx-413 akx-265">Message</label>
+                <textarea id="sender-message" rows="5" required placeholder="Tell me about your data project or role..." class="akx-466 akx-323 akx-332 akx-345 akx-019 akx-070 akx-095 akx-149 akx-150 akx-418 akx-376 akx-417 akx-313 akx-437 akx-335"></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="akx-101 akx-466 akx-333 akx-345 akx-415 akx-155 akx-417 akx-143 akx-226 akx-231 akx-167">
+              <span>Send Message</span>
+              <i class="akx-139 akx-135 akx-418"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== 11. MINIMALIST DARK FOOTER ==================== -->
+<footer class="akh-footer">
+  <div class="akh-footer-container">
+
+    <div class="akh-footer-brand">
+      <span class="akh-footer-logo">AM</span>
+      <span class="akh-footer-name">AKHASH A M</span>
+    </div>
+
+    <p class="akh-footer-copyright">
+      &copy; 2026 Akhash A M. MIS &amp; Reporting Portfolio.
+    </p>
+
+    <div class="akh-footer-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+  </div>
+</footer>
+
+<!-- Floating Scroll-to-Top Button -->
+<button id="scroll-top-btn"
+        aria-label="Scroll to top"
+        class="akh-scroll-top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+  
+
+
+  <script>
+     // 1. Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('akx-207');
+    });
+    document.querySelectorAll('.akx-289').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('akx-207'));
+    });
+
+    // 2. Typing Role Effect in Hero
+    const roles = [
+      'MIS Executive',
+      'Reporting Analyst',
+      'Data Analyst',
+      'Excel & SQL Dashboard Developer'
+    ];
+    let roleIdx = 0;
+    let charIdx = 0;
+    let isDeleting = false;
+    const typingEl = document.getElementById('typing-role');
+
+    function typeLoop() {
+      const current = roles[roleIdx];
+      if (!isDeleting) {
+        typingEl.textContent = current.substring(0, charIdx + 1);
+        charIdx++;
+        if (charIdx === current.length) {
+          isDeleting = true;
+          setTimeout(typeLoop, 1800);
+          return;
+        }
+      } else {
+        typingEl.textContent = current.substring(0, charIdx - 1);
+        charIdx--;
+        if (charIdx === 0) {
+          isDeleting = false;
+          roleIdx = (roleIdx + 1) % roles.length;
+        }
+      }
+      setTimeout(typeLoop, isDeleting ? 45 : 85);
+    }
+    setTimeout(typeLoop, 900);
+
+    // 3. Interactive 3D Spherical Word Cloud
+    const cloudTerms = [
+      { text: 'MIS Reporting', size: 20, color: '#22d3ee' },
+      { text: 'KPI Monitoring', size: 18, color: '#f8fafc' },
+      { text: 'Power Query', size: 19, color: '#38bdf8' },
+      { text: 'Power Pivot', size: 18, color: '#c084fc' },
+      { text: 'DAX', size: 21, color: '#a855f7' },
+      { text: 'PivotTables', size: 17, color: '#cbd5e1' },
+      { text: 'SQL Server', size: 20, color: '#22d3ee' },
+      { text: 'T-SQL', size: 18, color: '#38bdf8' },
+      { text: 'Advanced Excel', size: 20, color: '#34d399' },
+      { text: 'XLOOKUP', size: 16, color: '#e2e8f0' },
+      { text: 'INDEX-MATCH', size: 16, color: '#94a3b8' },
+      { text: 'CTEs', size: 16, color: '#cbd5e1' },
+      { text: 'Window Functions', size: 16, color: '#c084fc' },
+      { text: 'Data Validation', size: 17, color: '#e2e8f0' },
+      { text: 'Dashboards', size: 19, color: '#38bdf8' },
+      { text: 'Data Visualization', size: 17, color: '#c084fc' },
+      { text: 'Trend Analysis', size: 16, color: '#f8fafc' },
+      { text: 'Microsoft Office', size: 15, color: '#94a3b8' }
+    ];
+
+    const cloudContainer = document.getElementById('tag-cloud-container');
+    const tagElements = [];
+    const totalTags = cloudTerms.length;
+
+    // Distribute points evenly on a Fibonacci sphere
+    cloudTerms.forEach((item, i) => {
+      const phi = Math.acos(-1 + (2 * i) / totalTags);
+      const theta = Math.sqrt(totalTags * Math.PI) * phi;
+
+      const el = document.createElement('span');
+      el.className = 'akx-469';
+      el.textContent = item.text;
+      el.style.fontSize = `${item.size}px`;
+      el.style.color = item.color;
+      cloudContainer.appendChild(el);
+
+      tagElements.push({
+        el,
+        x: Math.cos(theta) * Math.sin(phi),
+        y: Math.sin(theta) * Math.sin(phi),
+        z: Math.cos(phi)
+      });
+    });
+
+    let angleX = 0.004;
+    let angleY = 0.006;
+    let isDragging = false;
+    let lastMouseX = 0;
+    let lastMouseY = 0;
+
+    cloudContainer.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      lastMouseX = e.clientX;
+      lastMouseY = e.clientY;
+    });
+    window.addEventListener('mouseup', () => {
+      isDragging = false;
+    });
+    window.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+      const dx = e.clientX - lastMouseX;
+      const dy = e.clientY - lastMouseY;
+      angleY = dx * 0.0008;
+      angleX = -dy * 0.0008;
+      lastMouseX = e.clientX;
+      lastMouseY = e.clientY;
+    });
+
+    function animateTagCloud() {
+      const rect = cloudContainer.getBoundingClientRect();
+      const radiusX = Math.min(rect.width * 0.36, 260);
+      const radiusY = Math.min(rect.height * 0.38, 130);
+
+      const cosX = Math.cos(angleX);
+      const sinX = Math.sin(angleX);
+      const cosY = Math.cos(angleY);
+      const sinY = Math.sin(angleY);
+
+      tagElements.forEach((tag) => {
+        // Rotate around X
+        const y1 = tag.y * cosX - tag.z * sinX;
+        const z1 = tag.z * cosX + tag.y * sinX;
+        // Rotate around Y
+        const x2 = tag.x * cosY - z1 * sinY;
+        const z2 = z1 * cosY + tag.x * sinY;
+
+        tag.x = x2;
+        tag.y = y1;
+        tag.z = z2;
+
+        const scale = (z2 + 1.8) / 2.8;
+        const alpha = Math.max(0.22, Math.min(1, (z2 + 1.2) / 2.1));
+        const translateX = tag.x * radiusX;
+        const translateY = tag.y * radiusY;
+
+        tag.el.style.transform = `translate3d(-50%, -50%, 0) translate3d(${translateX.toFixed(1)}px, ${translateY.toFixed(1)}px, 0) scale(${scale.toFixed(2)})`;
+        tag.el.style.opacity = alpha.toFixed(2);
+        tag.el.style.zIndex = Math.round((z2 + 1) * 20);
+      });
+
+      // Gently dampen manual drag spin back to calm auto-rotation
+      if (!isDragging) {
+        angleX += (0.003 - angleX) * 0.04;
+        angleY += (0.0055 - angleY) * 0.04;
+      }
+
+      requestAnimationFrame(animateTagCloud);
+    }
+    animateTagCloud();
+
+    // 4. Skill Filter Tabs
+    const filterBtns = document.querySelectorAll('.akx-361');
+    const skillCards = document.querySelectorAll('.akx-360');
+
+    filterBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach((b) => {
+          b.classList.remove('akx-101', 'akx-417');
+          b.classList.add('akx-023', 'akx-413', 'akx-070', 'akx-095');
+        });
+        btn.classList.add('akx-101', 'akx-417');
+        btn.classList.remove('akx-023', 'akx-413', 'akx-070', 'akx-095');
+
+        const filter = btn.getAttribute('data-filter');
+        skillCards.forEach((card) => {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.style.display = 'akx-066';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // 5. Project Case Study Modal Data
+    const projectDetails = [
+      {
+        tag: 'Excel • Power Query • Power Pivot • DAX',
+        title: 'Medicine Data Vault – MIS Dashboard',
+        desc: 'An Excel MIS dashboard covering sales, purchases, GST and profit, built on Power Query, Power Pivot and DAX.',
+        bullets: [
+          'Combined sales, purchase, GST and profit figures in one management view.',
+          'Added slicers for financial-year and staff-wise analysis.'
+        ]
+      },
+      {
+        tag: 'Excel • PivotTables • Slicers',
+        title: 'Fiscal Matrix – Financial MIS Dashboard',
+        desc: 'A financial MIS dashboard that tracks revenue, expenses and profit and loss in Excel.',
+        bullets: [
+          'Tracked revenue, expenses and profit and loss in a single dashboard.',
+          'Enabled department-wise and category-wise analysis using slicers and PivotTables.'
+        ]
+      },
+      {
+        tag: 'Excel • Risk Analysis • Slicers',
+        title: 'Fraud Pulse Analytics – Risk Analysis Dashboard',
+        desc: 'A risk dashboard built on credit scores, debt-to-income ratios and fraud flags.',
+        bullets: [
+          'Brought credit score, debt-to-income and fraud flag data into one view.',
+          'Used slicers to filter and review high-risk accounts.'
+        ]
+      },
+      {
+        tag: 'Excel • SQL • Inventory MIS',
+        title: 'Stock Sphere Intelligence – Inventory MIS Dashboard',
+        desc: 'An inventory MIS dashboard that tracks stock in, stock out and reorder items.',
+        bullets: [
+          'Wrote SQL queries for stock analysis.',
+          'Added slicers by year, month, product and category.'
+        ]
+      }
+    ];
+
+    function openProjectModal(index) {
+      const data = projectDetails[index];
+      document.getElementById('modal-tag').textContent = data.tag;
+      document.getElementById('modal-title').textContent = data.title;
+      document.getElementById('modal-desc').textContent = data.desc;
+      const ul = document.getElementById('modal-bullets');
+      ul.innerHTML = data.bullets
+        .map((b) => `<li class="akx-143 akx-228 akx-167"><i class="akx-139 akx-116 akx-397 akx-291 akx-387"></i><span>${b}</span></li>`)
+        .join('');
+      const modal = document.getElementById('project-modal');
+      modal.classList.remove('akx-207');
+      modal.classList.add('akx-143');
+    }
+
+    function closeProjectModal() {
+      const modal = document.getElementById('project-modal');
+      modal.classList.add('akx-207');
+      modal.classList.remove('akx-143');
+    }
+
+    // 6. Toast Notifications & Form Handling
+    let toastTimer;
+    function showToast(msg) {
+      const box = document.getElementById('toast-box');
+      document.getElementById('toast-message').textContent = msg;
+      box.classList.remove('akx-298', 'akx-314');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        box.classList.add('akx-298', 'akx-314');
+      }, 3400);
+    }
+
+    function triggerResumeToast() {
+      showToast('Preparing Akhash_AM_Resume.pdf...');
+
+      const link = document.createElement('a');
+    link.href = './Akhash_AM_Resume.pdf';
+    link.download = 'Akhash_AM_Resume.pdf';
+
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    }
+
+    function triggerCertToast(certName) {
+      showToast(`Verified Credential: ${certName}`);
+    }
+
+    document.getElementById('contact-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('sender-name').value.trim();
+      showToast(`Thank you, ${name || 'there'}! Your message has been sent to Akhash.`);
+      e.target.reset();
+    });
+
+    // 7. Scroll Reveal & Active Nav Highlighting + Scroll-To-Top
+    const revealEls = document.querySelectorAll('.akx-336');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('akx-448');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    revealEls.forEach((el) => observer.observe(el));
+
+    const scrollTopBtn = document.getElementById('scroll-top-btn');
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.akx-296');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 450) {
+        scrollTopBtn.classList.remove('akx-298', 'akx-314');
+      } else {
+        scrollTopBtn.classList.add('akx-298', 'akx-314');
+      }
+
+      let currentId = 'home';
+      sections.forEach((sec) => {
+        const top = sec.offsetTop - 130;
+        if (window.scrollY >= top) {
+          currentId = sec.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach((link) => {
+        const href = link.getAttribute('href').replace('#', '');
+        if (href === currentId) {
+          link.classList.add('akx-397', 'akx-034');
+          link.classList.remove('akx-413');
+        } else {
+          link.classList.remove('akx-397', 'akx-034');
+          link.classList.add('akx-413');
+        }
+      });
+    });
+
+    // scrollTopBtn.addEventListener('click', () => {
+    //   window.scrollTo({ top: 0, behavior: 'smooth' });
+    // });
+
+</script>
+
+
+<script>
+
+const akhScrollTopBtn = document.getElementById("scroll-top-btn");
+
+window.addEventListener("scroll", function () {
+    if (window.scrollY > 300) {
+        akhScrollTopBtn.classList.add("akh-scroll-visible");
+    } else {
+        akhScrollTopBtn.classList.remove("akh-scroll-visible");
+    }
+});
+
+akhScrollTopBtn.addEventListener("click", function () {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+
+</script>
+
+
+</body>
+</html>
